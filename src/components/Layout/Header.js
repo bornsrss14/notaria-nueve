@@ -1,24 +1,32 @@
 import React from "react";
+import LogoNotariaNueve from "../Core/LogoNotariaNueve";
 export const Header = () => {
   return (
     <div>
       <header className="header">
+        <div className="logo-wrapper">
+          <LogoNotariaNueve />
+          <div className="logo-letters">
+            <p id="not-nueve">Notaría Pública 9</p>
+            <p id="lic-lilia">LIC. LILIA REYES GOMEZ</p>
+          </div>
+        </div>
         <nav className="nav">
           <ul className="nav-list">
             <li>
-              <a href="#secc1">SECC#1</a>
+              <a href="#secc1">Home</a>
             </li>
             <li>
-              <a href="#secc2">SECC#2</a>
+              <a href="#secc2">Servicios</a>
             </li>
             <li>
-              <a href="#secc3">SECC#3</a>
+              <a href="#secc3">Contacto</a>
             </li>
             <li>
-              <a href="#secc4">SECC#4</a>
+              <a href="#secc4">FAQ</a>
             </li>
             <li>
-              <a href="#secc5">SECC#5</a>
+              <a href="#secc5">Nosotros</a>
             </li>
             <li>
               <a href="#secc6">SECC#6</a>
