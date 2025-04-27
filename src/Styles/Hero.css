@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+:root {
+  --color-not-nueve: #1100a5;
+}
+.hero {
+  height: 73vh;
+  background-image: url("file:///C:/Users/Charo/OneDrive/Documents/Notaria%209%20_%20pagina%20web/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+}
+
+.hero-content {
+  background: rgba(21, 5, 60, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.hero-button {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #dddddd;
+}
+
+/* NAV BAR SECTION */
+/* Estilos del header */
+.header {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin: 1rem 20px; /* Espaciado entre las secciones */
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #ff6600;
+}
