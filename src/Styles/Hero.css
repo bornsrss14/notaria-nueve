@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
   --color-not-nueve: #1100a5;
   --color-white: #fff;
   --color-dark-gray: #333333;
   --color-light-gray: #dddddd;
+  --color-wine: #b00404;
 }
 .hero {
   height: 73vh;
@@ -87,13 +93,15 @@ h3 {
 
 .nav-list a {
   color: var(--color-dark-gray);
+  display: inline-block;
   text-decoration: none;
   font-weight: 400;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .nav-list a:hover {
+  transform: scale(1.07);
   color: var(--color-not-nueve);
 }
 
@@ -135,4 +143,68 @@ h3 {
   font-weight: lighter;
   font-family: "Source Sans Pro", sans-serif;
   letter-spacing: 0.07rem;
+}
+
+/* WHO WE ARE SECTION */
+.we-are-section {
+  height: 14rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--color-not-nueve);
+}
+
+/* OUR SERVICES */
+.our-services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border: 1px solid var(--color-wine);
+  height: 30rem;
+}
+.our-services-wrapper h3 {
+  color: var(--color-dark-gray);
+}
+
+.fuente-secundaria {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.93rem;
+  color: var(--color-wine);
+}
+.show-more {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: var(--color-wine);
+}
+#special-section {
+  height: 12rem;
+  width: 12rem;
+  padding: 1.04rem 0.2rem;
+  border: 1px solid var(--color-dark-gray);
+}
+#special-section p,
+h3 {
+  margin: 0.2rem 0.3rem;
+}
+.each-serv-icon-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  AVANCE*/
+.avance {
+  width: 100%;
+  height: 10px;
+  background-color: var(--color-not-nueve);
+}
+
+.each-service {
+  height: 12rem;
+  width: 12rem;
+  padding: 1.04rem 0.2rem;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }

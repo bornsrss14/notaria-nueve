@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@faker-js/faker": "^9.7.0",
+    "@tabler/core": "^1.2.0",
+    "@tabler/icons": "^3.31.0",
+    "@tabler/icons-react": "^3.31.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",

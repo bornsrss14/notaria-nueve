@@ -28,9 +28,6 @@ export const Header = () => {
             <li>
               <a href="#secc5">Nosotros</a>
             </li>
-            <li>
-              <a href="#secc6">SECC#6</a>
-            </li>
           </ul>
         </nav>
       </header>
