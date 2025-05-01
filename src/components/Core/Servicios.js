@@ -5,7 +5,7 @@ export const Servicios = ({ Icon, advice, description }) => {
       <div className="each-service">
         <div className="each-serv-icon-label">
           <div className="icon-legal">
-            <Icon size={24} />
+            <Icon size={26} stroke={1} color="#1100a5" />
           </div>
           <h3>{advice}</h3>
         </div>

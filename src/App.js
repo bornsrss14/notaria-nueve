@@ -6,6 +6,7 @@ import OurServices from "./components/Layout/OurServices";
 import Contacto from "./components/Layout/Contacto";
 import Footer from "./components/Layout/Footer";
 import PrivacyNotice from "./components/Core/PrivacyNotice";
+import FAQ from "./components/Layout/FAQ";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <WhoWeAreSection />
       <OurServices />
       <Contacto />
+      <FAQ />
       <Footer />
     </div>
   );

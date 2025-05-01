@@ -156,12 +156,13 @@ h3 {
 /* OUR SERVICES */
 .our-services-wrapper {
   display: grid;
-  padding: 2.6rem 6rem;
+  padding: 2.6rem 5.5rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   border: 1px solid var(--color-wine);
   height: 30rem;
-  gap: 1.4rem;
+  width: 100%;
+  gap: 1rem;
 }
 .our-services-wrapper h3 {
   color: var(--color-dark-gray);
@@ -182,7 +183,7 @@ h3 {
 }
 #special-section {
   height: 12rem;
-  width: 15rem;
+  width: 18rem;
   padding: 1.44rem 0.9rem;
   border: 1px solid var(--color-dark-gray);
 }
@@ -192,6 +193,7 @@ h3 {
 }
 .each-serv-icon-label {
   display: flex;
+  gap: 0.4rem;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -206,18 +208,28 @@ h3 {
 
 .each-service {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 13px;
   height: 12rem;
-  width: 16rem;
-  padding: 1.04rem 2rem;
+  width: 18rem;
+  padding: 1.04rem 1.6rem;
   overflow: hidden;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-
+.truncate-multiline p.short {
+  text-align: left;
+}
 .truncate-multiline {
+  color: var(--color-dark-gray);
+  letter-spacing: 0.3px;
+  text-align: justify;
+  hyphens: auto;
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* número de líneas que quieres mostrar */
+  -webkit-line-clamp: 4; /* número de líneas que quieres mostrar */
   line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -301,4 +313,63 @@ h3 {
 }
 .boldbold {
   font-weight: bold;
+}
+
+/* FAQs */
+.faq-container {
+  max-width: 80%;
+  min-width: 80%;
+  margin: 3.2rem 7rem;
+  padding: 1.5rem 0;
+  font-family: "Poppins", sans-serif;
+}
+.faq-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.faq-item {
+  border: 1px solid var(--color-var-green-outline);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: var(--color-var-green-outline);
+  border: none;
+  padding: 1rem;
+  font-size: 1.02rem;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  color: rgb(57, 56, 56);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background: var(--color-var-white);
+}
+
+.faq-icon {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.faq-answer {
+  padding: 15px;
+  background: white;
+  font-size: 16px;
+  border-top: 1px solid #ccc;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
 }
