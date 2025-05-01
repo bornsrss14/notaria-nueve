@@ -108,8 +108,8 @@ h3 {
 /* Logo Notaria 9 */
 
 .contenedor {
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   max-width: 500px;
   border: 1px solid #ccc;
 }
@@ -207,4 +207,40 @@ h3 {
   padding: 1.04rem 0.2rem;
   overflow: hidden;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-close-button {
+  display: none !important;
+}
+#flexx {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.footer-main {
+  padding: 0.4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 7rem;
+  background-color: var(--color-not-nueve);
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--color-white);
+}
+.footer-main a {
+  text-decoration: none;
+  color: var(--color-white);
+  display: flex;
+}
+
+.foot-second {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-main a:hover {
+  color: #bfd9f4;
+  border-bottom: 2px solid #bfd9f4;
 }

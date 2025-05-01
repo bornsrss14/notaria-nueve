@@ -3,6 +3,8 @@ import Header from "./components/Layout/Header";
 import "./Styles/Hero.css";
 import WhoWeAreSection from "./components/Layout/WhoWeAreSection ";
 import OurServices from "./components/Layout/OurServices";
+import Contacto from "./components/Layout/Contacto";
+import Footer from "./components/Layout/Footer";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <HeroSection />
       <WhoWeAreSection />
       <OurServices />
+      <Contacto />
+      <Footer />
     </div>
   );
 }
