@@ -5,6 +5,7 @@ import WhoWeAreSection from "./components/Layout/WhoWeAreSection ";
 import OurServices from "./components/Layout/OurServices";
 import Contacto from "./components/Layout/Contacto";
 import Footer from "./components/Layout/Footer";
+import PrivacyNotice from "./components/Core/PrivacyNotice";
 
 function App() {
   return (

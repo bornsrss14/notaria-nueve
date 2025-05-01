@@ -156,10 +156,12 @@ h3 {
 /* OUR SERVICES */
 .our-services-wrapper {
   display: grid;
+  padding: 2.6rem 6rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   border: 1px solid var(--color-wine);
   height: 30rem;
+  gap: 1.4rem;
 }
 .our-services-wrapper h3 {
   color: var(--color-dark-gray);
@@ -173,14 +175,15 @@ h3 {
 .show-more {
   display: flex;
   flex-direction: row;
+
   justify-content: left;
   align-items: center;
   color: var(--color-wine);
 }
 #special-section {
   height: 12rem;
-  width: 12rem;
-  padding: 1.04rem 0.2rem;
+  width: 15rem;
+  padding: 1.44rem 0.9rem;
   border: 1px solid var(--color-dark-gray);
 }
 #special-section p,
@@ -202,11 +205,46 @@ h3 {
 }
 
 .each-service {
+  position: relative;
+  border-radius: 13px;
   height: 12rem;
-  width: 12rem;
-  padding: 1.04rem 0.2rem;
+  width: 16rem;
+  padding: 1.04rem 2rem;
   overflow: hidden;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.truncate-multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* número de líneas que quieres mostrar */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.overlay {
+  position: absolute;
+  top: 100%; /* por defecto iría debajo si no ajustamos */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%; /* cubrir solo el área del texto truncado */
+  background-color: rgba(128, 128, 128, 0.944);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 10;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.each-service:hover .overlay {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .leaflet-popup-close-button {
@@ -243,4 +281,24 @@ h3 {
 .footer-main a:hover {
   color: #bfd9f4;
   border-bottom: 2px solid #bfd9f4;
+}
+
+#privacy-main {
+  padding: 4rem 9rem;
+}
+.privacy-title {
+  text-align: center;
+}
+.privacity-text {
+  list-style: disc inside;
+  text-align: justify;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.boldbold {
+  font-weight: bold;
 }

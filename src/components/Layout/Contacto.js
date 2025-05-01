@@ -1,7 +1,6 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { IconMapPin, IconPhone } from "@tabler/icons-react";
 import L from "leaflet";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
@@ -65,18 +64,6 @@ export const Contacto = () => {
             </Popup>
           </Marker>
         </MapContainer>
-      </div>
-      <div className="container-contacto">
-        <div id="flexx">
-          <IconMapPin stroke={1} color="blue" />
-          <div>
-            <h4>Dirección:</h4>
-            <p>
-              Calle 20 entre evenidas 13 y 15 #1303, Federal, 94570 Córdoba,
-              Ver.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

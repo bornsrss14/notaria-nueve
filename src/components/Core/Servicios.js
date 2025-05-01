@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import { faker } from "@faker-js/faker";
 export const Servicios = ({ Icon, advice, description }) => {
-  const LoremIpsumComponent = ({ length }) => {
-    const text = faker.lorem.paragraph();
-    return <p>{text.slice(0, length)}</p>;
-  };
   return (
     <>
       <div className="each-service">
@@ -14,8 +9,9 @@ export const Servicios = ({ Icon, advice, description }) => {
           </div>
           <h3>{advice}</h3>
         </div>
-        <div>
+        <div className="truncate-multiline">
           <p>{description}</p>
+          <div className="overlay">Conocer más...</div>
         </div>
       </div>
     </>
