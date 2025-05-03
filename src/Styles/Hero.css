@@ -12,6 +12,7 @@
   --color-dark-gray: #333333;
   --color-light-gray: #dddddd;
   --color-wine: #b00404;
+  --color-green: #32be08;
 }
 .hero {
   height: 73vh;
@@ -263,8 +264,10 @@ h3 {
   display: none !important;
 }
 #flexx {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 3rem 19rem;
+  align-items: center;
+  justify-content: center;
   justify-content: left;
 }
 
@@ -287,6 +290,7 @@ h3 {
 
 .foot-second {
   display: flex;
+  text-transform: uppercase;
   gap: 1rem;
 }
 
@@ -339,6 +343,7 @@ h3 {
   border: 1px solid var(--color-var-green-outline);
   border-radius: 15px;
   overflow: hidden;
+  width: 80%;
 }
 
 .faq-question {
@@ -352,6 +357,7 @@ h3 {
   cursor: pointer;
   color: rgb(57, 56, 56);
   display: flex;
+  font-family: "Poppins", sans-serif;
   justify-content: space-between;
   align-items: center;
 }
@@ -369,7 +375,64 @@ h3 {
   padding: 15px;
   background: white;
   font-size: 16px;
+  color: var(--gray);
   border-top: 1px solid #ccc;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+}
+.phone-mail-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem 4rem;
+  gap: 1.4rem;
+  border: 1px solid var(--color-dark-gray);
+  font-family: "Poppins", sans-serif;
+}
+.map-div {
+  width: 100%;
+}
+.main-contact-wrapper {
+  display: grid;
+  width: 90%;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  margin: 0.3rem auto;
+  padding: 2rem 5rem;
+}
+.grid-hours {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  background-color: var(--color-light-gray);
+  height: auto;
+  width: 22rem;
+  padding: 1rem 2rem;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+.hours-main-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.openOrClose {
+  color: var(--color-green);
+}
+
+.openOrCloseTab {
+  font-size: 0.7rem;
+}
+
+.groupSpan {
+  display: flex;
+  gap: 0.61rem;
+  align-items: center;
+  justify-content: center;
 }

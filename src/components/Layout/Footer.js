@@ -14,7 +14,8 @@ export const Footer = () => {
       <div className="foot-second">
         <a href="/aviso-de-privacidad.html">Aviso de privacidad </a>|
         <a href="/terminos-y-condiciones.html">FAQs</a>|
-        <a href="/terminos-y-condiciones.html">Historia</a>
+        <a href="/terminos-y-condiciones.html">Historia</a>|
+        <a href="/terminos-y-condiciones.html">Directorio</a>
       </div>
     </div>
   );
