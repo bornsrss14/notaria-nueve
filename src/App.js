@@ -9,6 +9,7 @@ import Footer from "./components/Layout/Footer";
 import PrivacyNotice from "./components/Core/PrivacyNotice";
 import FAQ from "./components/Layout/FAQ";
 import Facilities from "./components/Layout/Facilities";
+import FacilitiesGallery from "./components/Layout/FacilitiesGallery";
 
 function App() {
   return (
@@ -20,7 +21,9 @@ function App() {
       <QuienesSomos />
       <Contacto />
       <Facilities />
+      <FacilitiesGallery />
       <FAQ />
+
       <Footer />
     </div>
   );

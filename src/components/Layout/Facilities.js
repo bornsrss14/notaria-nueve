@@ -28,7 +28,7 @@ const Facilities = () => {
 
   return (
     <div>
-      <section style={{ padding: "2rem", textAlign: "center" }}>
+      <section id="facilities-wrapper">
         <h2>Nuestras instalaciones</h2>
         <div
           style={{
@@ -39,16 +39,9 @@ const Facilities = () => {
           }}
         >
           {facilities.map((facility, index) => (
-            <div
-              key={index}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
+            <div key={index} className="icon-facilities">
               {facility.icon}
-              <span style={{ marginTop: "0.5rem" }}>{facility.label}</span>
+              <span className="facilitie-label">{facility.label}</span>
             </div>
           ))}
         </div>

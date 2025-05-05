@@ -56,11 +56,15 @@ export const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <>
+    <section className="faq-wrapper-main">
+      <div id="title-faq">
+        <p className="title-faq-p">Preguntas frecuentes</p>
+        <p className="sub-title-faq">
+          Elige el tema de interés y encuentra respuestas rápidas.
+        </p>
+      </div>
       <div className="faq-container">
-        <h1 className="faq-title">Preguntas Frecuentes (FAQ)</h1>
         <div className="faq-list">
-          <h3>🧾 Servicios generales</h3>
           {faqsGenerales.map((faq, index) => (
             <div key={index} className="faq-item">
               <button className="faq-question" onClick={() => toggleFaq(index)}>
@@ -76,7 +80,7 @@ export const FAQ = () => {
           ))}
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

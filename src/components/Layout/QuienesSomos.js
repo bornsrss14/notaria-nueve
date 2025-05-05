@@ -28,6 +28,11 @@ export const QuienesSomos = () => {
       ref={ref}
       className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
     >
+      <h1>Artículos Notariales</h1>
+      <p>
+        Mantente al día con las últimas actualizaciones, mejores prácticas, y
+        más.
+      </p>
       <div className="we-are-section">
         <div className="article-quienes-somo">
           <div id="relleno">
