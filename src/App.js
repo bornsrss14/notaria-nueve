@@ -8,6 +8,7 @@ import Contacto from "./components/Layout/Contacto";
 import Footer from "./components/Layout/Footer";
 import PrivacyNotice from "./components/Core/PrivacyNotice";
 import FAQ from "./components/Layout/FAQ";
+import Facilities from "./components/Layout/Facilities";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
       <Header />
       <div className="avance"></div>
       <HeroSection />
-      <QuienesSomos />
       <OurServices />
+      <QuienesSomos />
       <Contacto />
+      <Facilities />
       <FAQ />
       <Footer />
     </div>
