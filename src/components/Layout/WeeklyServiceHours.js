@@ -1,36 +1,31 @@
 import { render } from "@testing-library/react";
 import React from "react";
 
-export const WeeklyServiceHours = () => {
+<sectio></sectio>;
+export const WeeklyServiceHours = ({ horarioServicio }) => {
   return (
-    <div className="grid-hours">
-      <p>Monday</p>
-      <p className="morning-shift">8AM - 2PM</p>
-      <p className="afternoon-shift">4PM - 6PM</p>
+    <div>
+      <section className="grid-hours">
+        {console.log(horarioServicio)}
+        {horarioServicio.map((horario, index) => (
+          <>
+            <p>{horario.day}</p>
+            <p className="morning-shift">
+              {horario.firstHourOpen
+                ? `${horario.firstHourOpen}AM -`
+                : "Cerrado"}
+              {horario.firstHourClose ? `${horario.firstHourClose}PM` : ""}
+            </p>
+            <p className="afternoon-shift">
+              {horario.secondHourOpen
+                ? `${horario.secondHourOpen}PM -`
+                : "Cerrado"}
 
-      <p>Tuesday</p>
-      <p className="morning-shift">8AM - 2PM</p>
-      <p className="afternoon-shift">4PM - 6PM</p>
-
-      <p>Wednesday</p>
-      <p className="morning-shift">8AM - 2PM</p>
-      <p className="afternoon-shift">4PM - 6PM</p>
-
-      <p>Thursday</p>
-      <p className="morning-shift">8AM - 2PM</p>
-      <p className="afternoon-shift">4PM - 6PM</p>
-
-      <p>Friday</p>
-      <p className="morning-shift">8AM - 2PM</p>
-      <p className="afternoon-shift">4PM - 6PM</p>
-
-      <p>Saturday</p>
-      <p className="morning-shift">9AM - 2PM</p>
-      <p className="afternoon-shift"> </p>
-
-      <p>Sunday</p>
-      <p className="morning-shift">Closed</p>
-      <p className="afternoon-shift"></p>
+              {horario.secondHourClose ? `${horario.secondHourClose}PM` : ""}
+            </p>
+          </>
+        ))}
+      </section>
     </div>
   );
 };

@@ -24,6 +24,59 @@ const icono_nueve = new L.Icon({
 const Contacto = () => {
   const position = [18.895503, -96.946083]; //NOTARIA 9
   const style = { height: "22rem", width: "100%" };
+
+  const horarioServicio = [
+    {
+      day: "Monday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Tuesday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Wednesday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Thursday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Friday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Saturday",
+      firstHourOpen: 9,
+      firstHourClose: 2,
+      secondHourOpen: null,
+      secondHourClose: null,
+    },
+    {
+      day: "Sunday",
+      firstHourOpen: null,
+      firstHourClose: null,
+      secondHourOpen: null,
+      secondHourClose: null,
+    },
+  ];
+
   return (
     <div className="main-contact-wrapper">
       <div className="map-div">
@@ -88,6 +141,7 @@ const Contacto = () => {
           Icono={IconMail}
         />
         <CurrentHour />
+        <WeeklyServiceHours horarioServicio={horarioServicio} />
       </div>
     </div>
   );

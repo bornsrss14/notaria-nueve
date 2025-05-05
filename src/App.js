@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="avance"></div>
+      <div className="avance "></div>
       <HeroSection />
       <OurServices />
       <QuienesSomos />
