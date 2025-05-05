@@ -2,11 +2,61 @@ import { render } from "@testing-library/react";
 import React from "react";
 
 <sectio></sectio>;
-export const WeeklyServiceHours = ({ horarioServicio }) => {
+export const WeeklyServiceHours = () => {
+  const horarioServicio = [
+    {
+      day: "Monday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Tuesday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Wednesday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Thursday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Friday",
+      firstHourOpen: 8,
+      firstHourClose: 2,
+      secondHourOpen: 16,
+      secondHourClose: 18,
+    },
+    {
+      day: "Saturday",
+      firstHourOpen: 9,
+      firstHourClose: 2,
+      secondHourOpen: null,
+      secondHourClose: null,
+    },
+    {
+      day: "Sunday",
+      firstHourOpen: null,
+      firstHourClose: null,
+      secondHourOpen: null,
+      secondHourClose: null,
+    },
+  ];
   return (
     <div>
       <section className="grid-hours">
-        {console.log(horarioServicio)}
         {horarioServicio.map((horario, index) => (
           <>
             <p>{horario.day}</p>

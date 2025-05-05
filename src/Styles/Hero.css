@@ -89,9 +89,10 @@ h3 {
 /* Estilos del header */
 .header {
   display: grid;
+  height: auto;
   grid-template-columns: 25rem 1fr;
   background-color: var(--color-white);
-  padding: 0.9rem 0.9rem;
+  padding: 0.2rem 0.9rem;
   text-align: center;
 }
 
@@ -453,8 +454,9 @@ h3 {
 .grid-hours {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  background-color: var(--color-light-gray);
+  grid-template-rows: repeat(7, 1rem);
+  gap: 0.4rem;
+  background-color: var(--color-white);
   height: auto;
   width: 26rem;
   padding: 1rem 2rem;
@@ -616,4 +618,34 @@ h3 {
   display: grid;
   grid-template-columns: 27% 1fr;
   margin: 2rem auto;
+}
+
+.renderizado-wrapper {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-button {
+  background-color: #004aad; /* Azul elegante */
+  color: white;
+  padding: 0.62rem 1.5rem;
+  font-size: 16px;
+  height: auto;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  align-self: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-button:hover {
+  background-color: #003580;
+  transform: translateY(-2px);
+}
+
+.contact-button:active {
+  transform: scale(0.98);
 }

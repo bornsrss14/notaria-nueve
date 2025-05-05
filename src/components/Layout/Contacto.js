@@ -25,57 +25,9 @@ const Contacto = () => {
   const position = [18.895503, -96.946083]; //NOTARIA 9
   const style = { height: "22rem", width: "100%" };
 
-  const horarioServicio = [
-    {
-      day: "Monday",
-      firstHourOpen: 8,
-      firstHourClose: 2,
-      secondHourOpen: 16,
-      secondHourClose: 18,
-    },
-    {
-      day: "Tuesday",
-      firstHourOpen: 8,
-      firstHourClose: 2,
-      secondHourOpen: 16,
-      secondHourClose: 18,
-    },
-    {
-      day: "Wednesday",
-      firstHourOpen: 8,
-      firstHourClose: 2,
-      secondHourOpen: 16,
-      secondHourClose: 18,
-    },
-    {
-      day: "Thursday",
-      firstHourOpen: 8,
-      firstHourClose: 2,
-      secondHourOpen: 16,
-      secondHourClose: 18,
-    },
-    {
-      day: "Friday",
-      firstHourOpen: 8,
-      firstHourClose: 2,
-      secondHourOpen: 16,
-      secondHourClose: 18,
-    },
-    {
-      day: "Saturday",
-      firstHourOpen: 9,
-      firstHourClose: 2,
-      secondHourOpen: null,
-      secondHourClose: null,
-    },
-    {
-      day: "Sunday",
-      firstHourOpen: null,
-      firstHourClose: null,
-      secondHourOpen: null,
-      secondHourClose: null,
-    },
-  ];
+  function handleConsola() {
+    console.log("Esto es un mensaje");
+  }
 
   return (
     <div className="main-contact-wrapper">
@@ -140,8 +92,7 @@ const Contacto = () => {
           description={"notaria9_corvera@yahoo.com.mx"}
           Icono={IconMail}
         />
-        <CurrentHour />
-        <WeeklyServiceHours horarioServicio={horarioServicio} />
+        <CurrentHour WeeklyServiceHours={WeeklyServiceHours} />
       </div>
     </div>
   );

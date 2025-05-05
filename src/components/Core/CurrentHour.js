@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { IconCaretDownFilled, IconChevronDown } from "@tabler/icons-react";
-export const CurrentHour = () => {
+export const CurrentHour = ({ WeeklyServiceHours }) => {
+  const [displayHours, setDisplayHours] = useState(false);
+  function handleConsola() {
+    setDisplayHours((prevState) => {
+      console.log("Estado previo", prevState);
+      return !prevState;
+    });
+  }
   return (
-    <>
+    <div onClick={handleConsola} className="renderizado-wrapper">
+      {/*Esto se renderiza en caso de ser falso  */}
       <div className="hours-main-wrapper">
         <p>Hours:</p>
         <p className="openOrClose">ABIERTO</p>
@@ -15,7 +23,9 @@ export const CurrentHour = () => {
           </span>
         </div>
       </div>
-    </>
+
+      <div>{displayHours && <WeeklyServiceHours />}</div>
+    </div>
   );
 };
 
