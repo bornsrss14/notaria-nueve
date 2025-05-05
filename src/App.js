@@ -1,7 +1,8 @@
 import HeroSection from "./components/Layout/HeroSection";
 import Header from "./components/Layout/Header";
 import "./Styles/Hero.css";
-import WhoWeAreSection from "./components/Layout/WhoWeAreSection ";
+import QuienesSomos from "./components/Layout/QuienesSomos"; // ✅ sin llaves
+
 import OurServices from "./components/Layout/OurServices";
 import Contacto from "./components/Layout/Contacto";
 import Footer from "./components/Layout/Footer";
@@ -14,7 +15,7 @@ function App() {
       <Header />
       <div className="avance"></div>
       <HeroSection />
-      <WhoWeAreSection />
+      <QuienesSomos />
       <OurServices />
       <Contacto />
       <FAQ />

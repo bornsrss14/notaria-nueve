@@ -21,7 +21,7 @@ const icono_nueve = new L.Icon({
   iconAnchor: [16, 32],
   popupAnchor: [0, -32],
 });
-export const Contacto = () => {
+const Contacto = () => {
   const position = [18.895503, -96.946083]; //NOTARIA 9
   const style = { height: "22rem", width: "100%" };
   return (

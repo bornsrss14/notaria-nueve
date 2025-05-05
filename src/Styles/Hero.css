@@ -119,6 +119,7 @@ h3 {
   height: 100%;
   object-fit: contain;
 }
+
 .logo-wrapper {
   display: flex;
   align-items: center;
@@ -148,10 +149,36 @@ h3 {
 
 /* WHO WE ARE SECTION */
 .we-are-section {
-  height: 14rem;
+  height: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  width: 87%;
+  grid-template-columns: repeat(4, 1fr);
   border: 1px solid var(--color-not-nueve);
+}
+.img-article {
+  border: 1px solid var(--color-not-nueve);
+  height: 8.4rem;
+}
+.subheading {
+  font-size: 1rem;
+  margin: 0;
+}
+.mainTitle {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 0.5rem 0;
+}
+.mainTitle * {
+  margin: 0;
+}
+.subheading {
+  margin: 0 0 0.7rem;
+  color: var(--color-dark-gray);
+}
+.article-pharagraph {
+  color: var(--color-dark-gray);
 }
 
 /* OUR SERVICES */
@@ -321,9 +348,7 @@ h3 {
 
 /* FAQs */
 .faq-container {
-  max-width: 80%;
-  min-width: 80%;
-  margin: 3.2rem 7rem;
+  width: 100%;
   padding: 1.5rem 0;
   font-family: "Poppins", sans-serif;
 }
@@ -335,6 +360,8 @@ h3 {
 }
 .faq-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 0.7rem;
 }
@@ -397,12 +424,11 @@ h3 {
 }
 .main-contact-wrapper {
   display: grid;
-  width: 90%;
+  width: 87%;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   margin: 0.3rem auto;
-  padding: 2rem 5rem;
 }
 .grid-hours {
   display: grid;
@@ -435,4 +461,50 @@ h3 {
   gap: 0.61rem;
   align-items: center;
   justify-content: center;
+}
+
+#article-wrapper {
+  width: 15rem;
+  margin: 0.45rem 1.46rem;
+}
+
+.cont-img-article {
+  width: 100%;
+  height: 124px; /* o el alto que quieras */
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cont-img-article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.numeral {
+  color: var(--color-not-nueve);
+}
+
+.article-quienes-somo {
+  position: relative;
+  background-color: var(--color-not-nueve);
+  width: 19rem;
+  color: var(--color-white);
+  overflow: hidden;
+  padding: 1rem 1.5rem;
+}
+#relleno {
+  position: absolute;
+  right: -28px;
+  top: 0;
+  opacity: 0.14;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contenido {
+  position: relative;
+  z-index: 2;
 }

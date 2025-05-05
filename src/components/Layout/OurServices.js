@@ -11,6 +11,7 @@ import {
   IconPencil,
 } from "@tabler/icons-react";
 import { Servicios } from "../Core/Servicios";
+import ReadMore from "../Core/ReadMore";
 
 export const OurServices = () => {
   const ourServicesArr = [
@@ -63,10 +64,7 @@ export const OurServices = () => {
         {/*Aquí se escribe el loop para gneerar todos los servicios apartir del array */}
         <div id="special-section">
           <h3>Nuestros Servicios</h3>
-          <div className="show-more">
-            <p className="fuente-secundaria">LEER MÁS</p>
-            <IconArrowRight stroke={1.3} />
-          </div>
+          <ReadMore />
         </div>
         {ourServicesArr.map((serv, index) => (
           <Servicios
