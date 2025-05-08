@@ -611,6 +611,9 @@ h3 {
 .renderizado-wrapper {
   height: auto;
   display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 

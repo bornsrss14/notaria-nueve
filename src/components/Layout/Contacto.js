@@ -2,18 +2,11 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import iconoPersonalizado from "../../assets/icono-not.png";
 import { ContactItem } from "../Core/ContactItem";
 import { IconMapPin, IconPhone, IconMail } from "@tabler/icons-react";
 import CurrentHour from "../Core/CurrentHour";
 import WeeklyServiceHours from "./WeeklyServiceHours";
-
-{
-  /* delete L.Icon.Default.prototype._getIconUrl; */
-}
 
 const icono_nueve = new L.Icon({
   iconUrl: iconoPersonalizado,
@@ -24,10 +17,6 @@ const icono_nueve = new L.Icon({
 const Contacto = () => {
   const position = [18.895503, -96.946083]; //NOTARIA 9
   const style = { height: "22rem", width: "100%" };
-
-  function handleConsola() {
-    console.log("Esto es un mensaje");
-  }
 
   return (
     <div className="main-contact-wrapper">
