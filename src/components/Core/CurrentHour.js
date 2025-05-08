@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 export const CurrentHour = ({ WeeklyServiceHours }) => {
   const [displayHours, setDisplayHours] = useState(false);
@@ -140,8 +141,20 @@ export const CurrentHour = ({ WeeklyServiceHours }) => {
           </span>
         </div>
       </div>
-
-      <div>{displayHours && <WeeklyServiceHours horarios={horarios} />}</div>
+      <AnimatePresence>
+        {displayHours && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            style={{ overflow: "hidden" }}
+          >
+            <WeeklyServiceHours horarios={horarios} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
