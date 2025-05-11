@@ -8,8 +8,10 @@
 
 :root {
   --color-not-nueve: #1100a5;
+  --color-white-plus: #fffdfd;
   --color-white: #fff;
   --color-dark-gray: #333333;
+
   --color-light-gray: #dddddd;
   --color-wine: #b00404;
   --color-green: #32be08;
@@ -34,7 +36,6 @@
 .hero img {
   width: 100%;
   object-fit: contain;
-  transform: scaleX(-1);
 }
 
 .hero-content {
@@ -74,11 +75,13 @@ h3 {
 .hero-button {
   background-color: var(--color-white);
   color: var(--color-dark-gray);
+  font-family: "Source Sans Pro", sans-serif;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s;
+  display: flex;
 }
 
 .hero-button:hover {
@@ -87,21 +90,30 @@ h3 {
 
 /* NAV BAR SECTION */
 /* Estilos del header */
+.nav * {
+  font-family: "Source Sans Pro", sans-serif;
+}
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1500;
   display: grid;
   height: auto;
+  transition: all 0.3s ease;
   grid-template-columns: 25rem 1fr;
   background-color: var(--color-white);
   padding: 0.2rem 0.9rem;
   text-align: center;
 }
-
 .nav {
   display: flex;
   justify-content: center;
 }
-
 .nav-list {
+  position: relative;
   list-style: none;
   display: flex;
   padding: 0;
@@ -110,20 +122,37 @@ h3 {
 }
 
 .nav-list li {
+  position: relative;
   margin: 1rem 20px;
 }
-
+.submenu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  left: -60%;
+  background-color: var(--color-white-plus);
+  padding: 0.5rem 0;
+  min-width: 225px;
+  text-align: left;
+  z-index: 100;
+}
+.nav-list li:hover .submenu {
+  display: block;
+}
 .nav-list a {
   color: var(--color-dark-gray);
   display: inline-block;
   text-decoration: none;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .nav-list a:hover {
-  transform: scale(1.07);
+  text-decoration: underline;
+
   color: var(--color-not-nueve);
 }
 
@@ -173,8 +202,6 @@ h3 {
   padding: 2.6rem 0;
   height: auto;
   display: grid;
-  margin: auto;
-  width: 87%;
   grid-template-columns: repeat(4, 1fr);
 }
 .img-article {
@@ -454,7 +481,9 @@ h3 {
 
 .hours-main-wrapper {
   display: flex;
-  align-items: center;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  align-items: left;
   gap: 1rem;
 }
 
@@ -465,7 +494,9 @@ h3 {
 .openOrCloseTab {
   font-size: 0.7rem;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .groupSpan {
   display: flex;
   gap: 0.61rem;
@@ -474,8 +505,8 @@ h3 {
 }
 
 #article-wrapper {
-  width: 15rem;
-  margin: 0.45rem 1.46rem;
+  width: 17.4rem;
+  margin: 0.45rem 0.6rem;
 }
 
 .cont-img-article {
@@ -579,7 +610,7 @@ h3 {
 }
 #title-faq {
   position: sticky;
-  top: 0;
+  top: 6rem;
   align-self: flex-start;
   height: fit-content;
   width: 100%;
@@ -658,4 +689,29 @@ h3 {
 }
 .close-span {
   color: var(--color-wine);
+}
+
+.articulos-notariales {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 87%;
+  padding: 2.6rem 0;
+}
+.lowResImg {
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  transition: filter 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.highResImg {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
 }

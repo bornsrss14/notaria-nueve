@@ -1,10 +1,10 @@
 import React from "react";
 import { LogoNotariaNueve } from "./LogoNotariaNueve";
 import ReadMore from "../Core/ReadMore";
-export const SingleArticle = () => {
+export const SingleArticle = ({ articleObject }) => {
   return (
     <>
-      <div id="article-wrapper">
+      <article id="article-wrapper">
         <div
           className="mainTitle"
           style={{
@@ -13,23 +13,21 @@ export const SingleArticle = () => {
             justifyContent: "left",
           }}
         >
-          <h3 className="numeral">01.</h3>
-          <h3>Find a Lawyer</h3>
+          <h3 className="numeral">{articleObject.counter}</h3>
+          <h3>{articleObject.titleArticle}</h3>
         </div>
-        <p className="subheading"> Pequeño titulo abajo</p>
+        <p className="subheading">{articleObject.subTitleArticle}</p>
         <div className="cont-img-article  ">
           <img
             className=""
-            src="https://www.excelsior.com.mx/800x600/filters:format(webp):quality(75)/media/pictures/2024/02/06/3071214.jpg"
-            alt="testamento"
+            src={articleObject.imgArticle}
+            alt={articleObject.altArticle}
+            loading="lazy"
           ></img>
         </div>
-        <p>
-          Parrafo de relacionado con el artculo para que puedan seguir leyendo,
-          por ejemplo, la importancia de el testamento
-        </p>
+        <p>{articleObject.briefDescription}</p>
         <ReadMore />
-      </div>
+      </article>
     </>
   );
 };

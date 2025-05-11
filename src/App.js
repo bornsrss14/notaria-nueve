@@ -10,12 +10,27 @@ import PrivacyNotice from "./components/Core/PrivacyNotice";
 import FAQ from "./components/Layout/FAQ";
 import Facilities from "./components/Layout/Facilities";
 import FacilitiesGallery from "./components/Layout/FacilitiesGallery";
+import { motion, useScroll } from "motion/react";
 
 function App() {
+  const { scrollYProgress } = useScroll();
   return (
     <div className="App">
+      <motion.div
+        id="scroll-indicator"
+        style={{
+          scaleX: scrollYProgress,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 2000,
+          height: 10,
+          originX: 0,
+          backgroundColor: "blue",
+        }}
+      ></motion.div>
       <Header />
-      <div className="avance "></div>
       <HeroSection />
       <OurServices />
       <QuienesSomos />

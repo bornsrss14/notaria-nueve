@@ -14,6 +14,7 @@ const icono_nueve = new L.Icon({
   iconAnchor: [16, 32],
   popupAnchor: [0, -32],
 });
+
 const Contacto = () => {
   const position = [18.895503, -96.946083]; //NOTARIA 9
   const style = { height: "22rem", width: "100%" };
@@ -73,7 +74,7 @@ const Contacto = () => {
         />
         <ContactItem
           typeDireccion={"Teléfonos"}
-          description={"271 717 9911"}
+          description={"271 717 9911 - 271 272 5760"}
           Icono={IconPhone}
         />
         <ContactItem

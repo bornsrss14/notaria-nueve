@@ -118,28 +118,27 @@ export const CurrentHour = ({ WeeklyServiceHours }) => {
           </span>
         </div> */}
         {/*  ~----------------------------------------------------------------------------------------*/}
-        <div style={{ display: "flex", gap: ".8rem" }}>
-          {(currentHour >= getMatchDay()?.rangos?.[0]?.open &&
-            currentHour < getMatchDay()?.rangos?.[0]?.close) ||
-          (currentHour >= getMatchDay()?.rangos?.[1]?.open &&
-            currentHour < getMatchDay()?.rangos?.[1]?.close) ? (
-            <span style={{ color: "green" }}>ABIERTO</span>
+        {(currentHour >= getMatchDay()?.rangos?.[0]?.open &&
+          currentHour < getMatchDay()?.rangos?.[0]?.close) ||
+        (currentHour >= getMatchDay()?.rangos?.[1]?.open &&
+          currentHour < getMatchDay()?.rangos?.[1]?.close) ? (
+          <span style={{ color: "green" }}>ABIERTO</span>
+        ) : (
+          <span style={{ color: "red" }}>CERRADO</span>
+        )}
+        {`Hoy ${today} de ${getMatchDay()?.rangos?.[0]?.open ?? ""}H - ${
+          getMatchDay()?.rangos?.[0]?.close ?? ""
+        }H | ${getMatchDay()?.rangos?.[1]?.open ?? ""}H - ${
+          getMatchDay()?.rangos?.[1]?.close ?? ""
+        }H`}
+
+        <span className="openOrCloseTab">
+          {displayHours ? (
+            <IconChevronUp stroke={3} size={"1.2rem"} color="#8fd7de" />
           ) : (
-            <span style={{ color: "red" }}>CERRADO</span>
+            <IconChevronDown stroke={3} size={"1.2rem"} color="#8fd7de" />
           )}
-          {`Hoy ${today} de ${getMatchDay()?.rangos?.[0]?.open}:00 - ${
-            getMatchDay()?.rangos?.[0]?.close
-          }:00  | ${getMatchDay()?.rangos?.[1]?.open}:00 - ${
-            getMatchDay()?.rangos?.[1]?.close
-          }:00 `}
-          <span className="openOrCloseTab">
-            {displayHours ? (
-              <IconChevronUp size={"1.2rem"} color="#8fd7de" />
-            ) : (
-              <IconChevronDown size={"1.2rem"} color="#8fd7de" />
-            )}
-          </span>
-        </div>
+        </span>
       </div>
       <AnimatePresence>
         {displayHours && (

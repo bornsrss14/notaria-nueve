@@ -4,7 +4,9 @@ export const ReadMore = () => {
   return (
     <div>
       <div className="show-more">
-        <p className="fuente-secundaria">LEER MÁS</p>
+        <a href="#ds">
+          <p className="fuente-secundaria">LEER MÁS</p>
+        </a>
         <IconArrowRight stroke={1.3} />
       </div>
     </div>

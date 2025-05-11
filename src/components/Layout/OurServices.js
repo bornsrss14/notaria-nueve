@@ -59,7 +59,7 @@ export const OurServices = () => {
     },
   ];
   return (
-    <div>
+    <div id="nuestros-servicios">
       <div className="our-services-wrapper">
         {/*Aquí se escribe el loop para gneerar todos los servicios apartir del array */}
         <div id="special-section">

@@ -1,8 +1,10 @@
-import React from "react";
+import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
+import React, { useRef, useState } from "react";
 import LogoNotariaNueve from "../Core/LogoNotariaNueve";
+
 export const Header = () => {
   return (
-    <div>
+    <>
       <header className="header">
         <div className="logo-wrapper">
           <LogoNotariaNueve />
@@ -14,7 +16,26 @@ export const Header = () => {
         <nav className="nav">
           <ul className="nav-list">
             <li>
-              <a href="#secc1">Servicios</a>
+              <div style={{ display: "flex", gap: ".5rem" }}>
+                <a href="#secc1">Servicios</a>
+                <div>
+                  <IconChevronDown stroke={1} color="blue" size={24} />
+                </div>
+              </div>
+              <ul className="submenu">
+                <li>
+                  <a href="#secc2">Desarrollo Inmobiliario</a>
+                </li>
+                <li>
+                  <a href="#se">Sociedades y poderes</a>
+                </li>
+                <li>
+                  <a href="#er">Vivienda</a>
+                </li>
+                <li>
+                  <a href="#45">Otros servicios</a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="#secc2">Nosotros</a>
@@ -32,7 +53,7 @@ export const Header = () => {
           <button className="contact-button">Contacto</button>
         </nav>
       </header>
-    </div>
+    </>
   );
 };
 
