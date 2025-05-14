@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import ImageFitRectangle from "../Core/ImageFitRectangle";
 
 export const Footer = () => {
   function nowDate() {
@@ -7,15 +9,71 @@ export const Footer = () => {
     return `Última actualización ${now.toLocaleDateString("es-ES", options)}`;
   }
   return (
-    <div className="footer-main">
-      <div>
-        <p>{nowDate()}</p>
+    <div className="">
+      <div className="grid-footer-four-sections">
+        <div className="colegio-notarios-wrapper">
+          <h1>N9 LRG</h1>
+          <a
+            title="enlaces externos"
+            href="https://notariosveracruz.mx/directorio/"
+          >
+            <ImageFitRectangle
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Fcolegio.png?alt=media&token=dbb04603-7975-41e8-8f96-3e56845e242e"
+              }
+              width={"7rem"}
+              height={"3rem"}
+            />
+          </a>
+        </div>
+        <div className="menu-wrapper">
+          <div>
+            <p>Manú</p>
+            <ul>
+              <li>Servicios</li>
+              <li>Nosotros</li>
+              <li>Notario</li>
+              <li>Artículos</li>
+              <li>FAQs</li>
+              <li>Contacto</li>
+            </ul>
+          </div>
+        </div>
+        <div className="location-wrapper">
+          <div>
+            <p>Oficinas</p>
+            <p>
+              CALLE 20 ENTRE AVENIDAS 13 y 15 #1303, Federal, 94570 Córdoba,
+              Veracruz de Ignacio de la Llave.
+            </p>
+          </div>
+          <div>
+            <p>Horario de Atención</p>
+            <p>Lunes a viernes: 08:00 – 18:00 Sábado: 09:00 – 13:00</p>
+          </div>
+        </div>
+        <div className="contact-info-wrapper">
+          <div>
+            <p>Teléfono</p>
+            <p>271 717 9911</p>
+          </div>
+
+          <div>
+            <p>Email</p>
+            <p> notaria9_corvera@yahoo.com.mx</p>
+          </div>
+        </div>
       </div>
-      <div className="foot-second">
-        <a href="/aviso-de-privacidad.html">Aviso de privacidad </a>|
-        <a href="/terminos-y-condiciones.html">FAQs</a>|
-        <a href="/terminos-y-condiciones.html">Historia</a>|
-        <a href="/terminos-y-condiciones.html">Directorio</a>
+      <div className="footer-main">
+        <div>
+          <p>{nowDate()}</p>
+        </div>
+        <div className="foot-second">
+          <Link to="/aviso-de-privacidad">Aviso de Privacidad</Link> |
+          <a href="/terminos-y-condiciones.html">FAQs</a>|
+          <Link to="nuestra-historia">Historia</Link>|
+          <Link to="directorio">Directorio</Link>
+        </div>
       </div>
     </div>
   );

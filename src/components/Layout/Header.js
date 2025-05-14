@@ -1,18 +1,19 @@
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import React, { useRef, useState } from "react";
 import LogoNotariaNueve from "../Core/LogoNotariaNueve";
+import { Link } from "react-router-dom";
 
-export const Header = () => {
+export const HeaderComponent = () => {
   return (
     <>
       <header className="header">
-        <div className="logo-wrapper">
+        <Link to="/" className="logo-wrapper">
           <LogoNotariaNueve />
           <div className="logo-letters">
             <p id="not-nueve">Notaría Pública 9</p>
             <p id="lic-lilia">LIC. LILIA REYES GOMEZ</p>
           </div>
-        </div>
+        </Link>
         <nav className="nav">
           <ul className="nav-list">
             <li>
@@ -24,30 +25,32 @@ export const Header = () => {
               </div>
               <ul className="submenu">
                 <li>
-                  <a href="#secc2">Desarrollo Inmobiliario</a>
+                  <Link to="/desarrollo-inmobiliario">
+                    Desarrollo Inmobiliario
+                  </Link>
                 </li>
                 <li>
-                  <a href="#se">Sociedades y poderes</a>
+                  <Link to="/sociedades-y-poderes">Sociedades y poderes</Link>
                 </li>
                 <li>
-                  <a href="#er">Vivienda</a>
+                  <Link to="/vivienda">Vivienda</Link>
                 </li>
                 <li>
-                  <a href="#45">Otros servicios</a>
+                  <Link to="/nuestros-servicios">Otros servicios</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#secc2">Nosotros</a>
+              <Link to="/sobre-nosotros">Nosotros</Link>
             </li>
             <li>
-              <a href="#secc3">Directorio</a>
+              <Link to="/directorio">Directorio</Link>
             </li>
             <li>
               <a href="#secc4">FAQ</a>
             </li>
             <li>
-              <a href="#secc5">Articulos</a>
+              <Link to="/articulos-notariales"> Articulos</Link>
             </li>
           </ul>
           <button className="contact-button">Contacto</button>
@@ -57,4 +60,4 @@ export const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderComponent;

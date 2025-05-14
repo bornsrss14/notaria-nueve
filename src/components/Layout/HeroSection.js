@@ -1,5 +1,6 @@
 import React from "react";
 import { IconArrowNarrowDown } from "@tabler/icons-react";
+import BlurImage from "./BlurImage";
 
 export const HeroSection = () => {
   return (
@@ -9,6 +10,16 @@ export const HeroSection = () => {
           src="https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Fbanner.jpg?alt=media&token=e3f3d112-e843-47d6-903f-afe683c8612a"
           alt="banner"
         ></img>
+        {/*  <BlurImage
+          lowRes="https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Flow-res-blur.jpg?alt=media&token=c84fb025-091e-4a38-8959-18a1741190e1"
+          highRes={
+            "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Fbanner.jpg?alt=media&token=e3f3d112-e843-47d6-903f-afe683c8612a"
+          }
+          alt={"notaria-9"}
+          height="100%"
+          width="100%"
+          loading="lazy"
+        /> */}
         <div className="hero-content">
           <h1>Notaría Pública No. 9</h1>
           <p>Servicios notariales con integridad y compromiso.</p>

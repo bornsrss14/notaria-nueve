@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-export const FAQ = () => {
+export const FAQComp = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const faqsGenerales = [
     {
@@ -84,4 +84,4 @@ export const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default FAQComp;

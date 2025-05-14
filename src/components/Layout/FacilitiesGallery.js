@@ -12,9 +12,19 @@ const FacilitiesGallery = () => {
     <div>
       <section id="facilities-gallery">
         <div className="gallery-grid">
-          {imagesGallery.map((src, index) => (
+          {imagesGallery.map((srcGallery, index) => (
             <div key={index} className="gallery-item">
-              <img loading="lazy" src={src} alt={`Instalación ${index + 1}`} />
+              {/* <img
+                loading="lazy"
+                src={srcGallery}
+                alt={`Instalación ${index + 1}`}
+              /> */}
+              <BlurImage
+                lowRes="https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Flow-res-blur.jpg?alt=media&token=c84fb025-091e-4a38-8959-18a1741190e1"
+                highRes={srcGallery}
+                alt="Banner Notaría"
+                height="220px"
+              />
             </div>
           ))}
         </div>

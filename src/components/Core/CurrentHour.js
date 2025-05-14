@@ -126,7 +126,7 @@ export const CurrentHour = ({ WeeklyServiceHours }) => {
         ) : (
           <span style={{ color: "red" }}>CERRADO</span>
         )}
-        {`Hoy ${today} de ${getMatchDay()?.rangos?.[0]?.open ?? ""}H - ${
+        {`Abre hoy ${today} de ${getMatchDay()?.rangos?.[0]?.open ?? ""}H - ${
           getMatchDay()?.rangos?.[0]?.close ?? ""
         }H | ${getMatchDay()?.rangos?.[1]?.open ?? ""}H - ${
           getMatchDay()?.rangos?.[1]?.close ?? ""
