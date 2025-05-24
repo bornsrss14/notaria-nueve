@@ -28,8 +28,8 @@ export const Footer = () => {
         </div>
         <div className="menu-wrapper">
           <div>
-            <p>Manú</p>
-            <ul>
+            <ul className="display-lista-footer">
+              <li id="bold-title-footer">Menú</li>
               <li>Servicios</li>
               <li>Nosotros</li>
               <li>Notario</li>
@@ -40,27 +40,33 @@ export const Footer = () => {
           </div>
         </div>
         <div className="location-wrapper">
-          <div>
-            <p>Oficinas</p>
-            <p>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: ".3rem" }}
+          >
+            <p id="bold-title-footer">Oficinas</p>
+            <p className="light-text">
               CALLE 20 ENTRE AVENIDAS 13 y 15 #1303, Federal, 94570 Córdoba,
               Veracruz de Ignacio de la Llave.
             </p>
           </div>
-          <div>
-            <p>Horario de Atención</p>
-            <p>Lunes a viernes: 08:00 – 18:00 Sábado: 09:00 – 13:00</p>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: ".3rem" }}
+          >
+            <p id="bold-title-footer">Horario de Atención</p>
+            <p className="light-text">
+              Lunes a viernes: 08:00 – 18:00 Sábado: 09:00 – 13:00
+            </p>
           </div>
         </div>
         <div className="contact-info-wrapper">
           <div>
-            <p>Teléfono</p>
-            <p>271 717 9911</p>
+            <p id="bold-title-footer">Teléfono</p>
+            <p className="light-text">271 717 9911</p>
           </div>
 
           <div>
-            <p>Email</p>
-            <p> notaria9_corvera@yahoo.com.mx</p>
+            <p id="bold-title-footer">Email</p>
+            <p className="light-text"> notaria9_corvera@yahoo.com.mx</p>
           </div>
         </div>
       </div>

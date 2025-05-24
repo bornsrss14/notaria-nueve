@@ -7,7 +7,7 @@ import Home from "./components/Layout/Home";
 import HeaderComponent from "./components/Layout/Header";
 import DirectorioComp from "./components/Layout/Directorio";
 import NuestraHistoria from "./components/Layout/OurStory";
-import DesarrolloInmobiliario from "./components/Layout/DesarrolloInmobiliario";
+import ServiciosNotariales from "./components/Layout/ServiciosNotariales";
 import SociedadesYPoderes from "./components/Layout/SociedadesYPoderes";
 import Vivienda from "./components/Layout/Vivienda";
 import NuestrosServicios from "./components/Layout/NuestrosServicios";
@@ -41,7 +41,7 @@ function App() {
         <Route path="nuestra-historia" element={<NuestraHistoria />}></Route>
         <Route
           path="desarrollo-inmobiliario"
-          element={<DesarrolloInmobiliario />}
+          element={<ServiciosNotariales />}
         ></Route>
         <Route
           path="/sociedades-y-poderes"

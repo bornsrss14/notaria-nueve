@@ -9,7 +9,7 @@ export const ImageFitRectangle = ({ src, width, height }) => {
   const containerStyle = {
     width,
     height,
-    margin: "1rem 1rem",
+    //margin: "1rem 1rem",
     overflow: "hidden",
   };
   return (

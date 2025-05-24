@@ -12,6 +12,7 @@
   --color-border: #0003;
   --color-border-dos: rgba(200, 207, 209, 0.342);
   --color-white: #fff;
+  --text-color--text-secondary: #8a8a8a;
   --color-dark-gray: #333333;
 
   --color-light-gray: #dddddd;
@@ -284,7 +285,6 @@ h3 {
 
 .each-service {
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -294,7 +294,7 @@ h3 {
   width: 18rem;
   padding: 1.04rem 1.6rem;
   overflow: hidden;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px rgba(160, 160, 160, 0.1);
   cursor: pointer;
   transition: transform 0.3s ease; /* suaviza la animación */
 }
@@ -354,8 +354,9 @@ h3 {
 .grid-footer-four-sections {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  justify-items: left;
   background-color: var(--color-not-nueve);
-  padding: 2rem 6rem;
+  padding: 3rem 6rem 4rem;
   font-family: "Source Sans Pro", sans-serif;
 
   color: var(--color-white);
@@ -879,7 +880,7 @@ p {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  animation: pulse 2s infinite;
+  animation: pulse 1s infinite;
   z-index: 10000;
 }
 .heading-style-h2 {
@@ -890,8 +891,10 @@ p {
   margin: 0;
 }
 .text-size-medium {
-  font-size: 1.124rem;
+  font-size: 1.14rem;
+  line-height: 1.67rem;
   color: var(--color-white);
+  font-family: "Source Sans Pro", sans-serif;
 }
 .max-width-large {
   display: flex;
@@ -910,4 +913,71 @@ p {
   100% {
     transform: scale(1.1);
   }
+}
+
+.menu-wrapper li {
+  list-style-type: none;
+}
+.display-lista-footer,
+.location-wrapper,
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.location-wrapper {
+  width: 65%;
+}
+.light-text {
+  color: #aaa;
+}
+#bold-title-footer {
+  font-weight: 700;
+}
+
+.display-lista-footer {
+  margin: 0;
+}
+.padding-global {
+  background-color: var(--color-not-nueve);
+  color: var(--color-white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 4rem 8rem;
+  align-items: center;
+}
+
+#section_servicios_layout {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 4rem;
+  grid-template-rows: auto;
+  grid-row-gap: 2rem;
+  width: 100%;
+  place-items: stretch start;
+  padding: 4rem 3rem;
+}
+.heading-style-h5 {
+  color: var(--color-dark-gray);
+  font-size: 1.5rem;
+}
+
+.heading-style-h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.itemsListado {
+  width: fit-content;
+  min-width: 20rem;
+}
+.itemsListado > p {
+  margin-top: 1rem;
+}
+
+.text-color-secondary {
+  color: var(--text-color--text-secondary);
 }
