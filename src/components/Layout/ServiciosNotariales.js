@@ -29,14 +29,16 @@ export const ServiciosNotariales = ({ pestaña = "Servicios" }) => {
       </div>
       <div className="padding-section-large"></div>
       <section>
-        {servicio.secciones.map((seccion, i) => (
-          <div key={i} className="itemsListado">
-            <div>
-              <h3 className="heading-style-h5">{seccion.titulo}</h3>
+        <div id="section_servicios_layout">
+          {servicio.secciones.map((seccion, i) => (
+            <div key={i} className="itemsListado">
+              <div>
+                <h3 className="heading-style-h5">{seccion.titulo}</h3>
+              </div>
+              <p className="text-color-secondary">{seccion.contenido}</p>
             </div>
-            <p className="text-color-secondary">{seccion.contenido}</p>
-          </div>
-        ))}
+          ))}
+        </div>
         {/* <div id="section_servicios_layout">
           <div className="itemsListado">
             <div>
