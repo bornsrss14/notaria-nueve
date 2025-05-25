@@ -17,7 +17,7 @@ const icono_nueve = new L.Icon({
 
 const Contacto = () => {
   const position = [18.895503, -96.946083]; //NOTARIA 9
-  const style = { height: "22rem", width: "100%" };
+  const style = { minHeight: "18rem", height: "100%", width: "100%" };
 
   return (
     <div className="main-contact-wrapper">

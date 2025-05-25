@@ -3,6 +3,9 @@ import { LogoNotariaNueve } from "./LogoNotariaNueve";
 import ReadMore from "../Core/ReadMore";
 import BlurImage from "../Layout/BlurImage";
 export const SingleArticle = ({ articleObject }) => {
+  const styleP = {
+    marginTop: "19px",
+  };
   return (
     <>
       <article id="article-wrapper">
@@ -38,7 +41,7 @@ export const SingleArticle = ({ articleObject }) => {
           />
         </div>
 
-        <p>{articleObject.briefDescription}</p>
+        <p style={styleP}>{articleObject.briefDescription}</p>
         <div className="stick-bottom ">
           <ReadMore />
         </div>

@@ -63,7 +63,7 @@ export const ServiciosNotariales = ({ pestaña = "Servicios" }) => {
           </div>
           <div className="itemsListado">
             <div>
-              <h3 class="heading-style-h5">Asociación en participación</h3>
+              <h3 className="heading-style-h5">Asociación en participación</h3>
             </div>
             <p className="text-color-secondary">
               Contrato en el que una persona física o moral, aporta bienes

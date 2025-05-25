@@ -1,15 +1,24 @@
 import React from "react";
 import { IconArrowNarrowDown } from "@tabler/icons-react";
 import BlurImage from "./BlurImage";
+import ImageFitRectangle from "../Core/ImageFitRectangle";
 
 export const HeroSection = () => {
   return (
     <>
       <section className="hero">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Fbanner.jpg?alt=media&token=e3f3d112-e843-47d6-903f-afe683c8612a"
+        {/* <img
+          src=""
           alt="banner"
-        ></img>
+        ></img> */}
+        <ImageFitRectangle
+          src={
+            "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Fbanner.jpg?alt=media&token=e3f3d112-e843-47d6-903f-afe683c8612a"
+          }
+          width={"100%"}
+          height={"100%"}
+        />
+
         {/*  <BlurImage
           lowRes="https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Flow-res-blur.jpg?alt=media&token=c84fb025-091e-4a38-8959-18a1741190e1"
           highRes={
