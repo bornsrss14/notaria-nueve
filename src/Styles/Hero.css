@@ -18,6 +18,9 @@
   --color-green: #32be08;
   --color-light-black: #424040;
 }
+a {
+  text-decoration: none;
+}
 .hero {
   height: 84vh;
   background-size: cover;
@@ -106,7 +109,7 @@ h3 {
   transition: all 0.3s ease;
   grid-template-columns: 25rem 1fr;
   background-color: var(--color-white);
-  padding: 1rem 0.9rem 0.2rem;
+  padding: 1rem 0.5rem 0.2rem;
   text-align: center;
 }
 .nav {
@@ -152,7 +155,6 @@ h3 {
 }
 
 .nav-list a:hover {
-  text-decoration: underline;
   color: var(--color-not-nueve);
 }
 
@@ -249,7 +251,7 @@ h3 {
 
 .fuente-secundaria {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 0.93rem;
+  font-size: 0.83rem;
   color: var(--color-wine);
 }
 .show-more {
@@ -263,7 +265,7 @@ h3 {
   height: 12rem;
   width: 18rem;
   padding: 1.44rem 0.9rem;
-  border: 1px solid var(--color-dark-gray);
+  border: 1px solid var(--color-light-gray);
 }
 #special-section p,
 h3 {
@@ -515,9 +517,11 @@ h3 {
   height: auto;
 }
 .main-contact-wrapper {
+  overflow: hidden;
   display: grid;
   width: 100%;
   max-width: 100%;
+
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
@@ -629,9 +633,11 @@ html {
   margin-top: 0.5rem;
 }
 #facilities-wrapper {
-  width: 87%;
-  margin: 3.5rem auto 0;
+  width: 100%;
+  padding: 0 3.3rem;
+  display: grid;
   text-align: center;
+  overflow-y: hidden;
 }
 
 #facilities-gallery {
@@ -689,10 +695,12 @@ html {
 }
 
 .faq-wrapper-main {
-  width: 87%;
+  width: 100%;
+  max-width: 100%;
   display: grid;
+  height: auto;
   grid-template-columns: 27% 1fr;
-  margin: 2rem auto;
+  padding: 2rem 9%;
 }
 
 .renderizado-wrapper {
@@ -748,6 +756,7 @@ html {
 }
 
 .articulos-notariales {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -788,9 +797,6 @@ p {
   background-color: var(--color-white-plus);
   margin: 4rem auto 0;
   align-items: center;
-}
-.heading-style-h1 {
-  font-size: 2rem;
 }
 .paragraph-article {
   font-size: 1.124rem;
@@ -974,7 +980,7 @@ p {
 
 .heading-style-h1 {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.2;
 }

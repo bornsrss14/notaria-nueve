@@ -33,7 +33,7 @@ export const HeroSection = () => {
           <h1>Notaría Pública No. 9</h1>
           <p>Servicios notariales con integridad y compromiso.</p>
           <a href="#nuestros-servicios" className="hero-button">
-            Conocenos
+            Conócenos
             <IconArrowNarrowDown stroke={1} />
           </a>
         </div>

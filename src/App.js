@@ -22,6 +22,7 @@ function App() {
       <motion.div
         id="scroll-indicator"
         style={{
+          maxWidth: "100%",
           scaleX: scrollYProgress,
           position: "fixed",
           top: 0,
@@ -31,6 +32,7 @@ function App() {
           height: 10,
           originX: 0,
           backgroundColor: "blue",
+          overflow: "hidden",
         }}
       ></motion.div>
 

@@ -33,8 +33,12 @@ const Facilities = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
             gap: "1.5rem",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            maxWidth: "100%",
             marginTop: "2rem",
           }}
         >
