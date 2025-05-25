@@ -39,19 +39,8 @@ function App() {
         <Route path="/aviso-de-privacidad" element={<PrivacyNotice />}></Route>
         <Route path="directorio" element={<DirectorioComp />}></Route>
         <Route path="nuestra-historia" element={<NuestraHistoria />}></Route>
-        <Route
-          path="desarrollo-inmobiliario"
-          element={<ServiciosNotariales />}
-        ></Route>
-        <Route
-          path="/sociedades-y-poderes"
-          element={<SociedadesYPoderes />}
-        ></Route>
-        <Route path="vivienda" element={<Vivienda />}></Route>
-        <Route
-          path="nuestros-servicios"
-          element={<NuestrosServicios />}
-        ></Route>{" "}
+        <Route path="/servicios/:id" element={<ServiciosNotariales />}></Route>
+
         <Route
           path="articulos-notariales"
           element={<RelatedArticleCom />}

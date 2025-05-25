@@ -1,31 +1,43 @@
 import React from "react";
+import objetoContenido from "../hooks/servicios.json";
 import ImageFitRectangle from "../Core/ImageFitRectangle";
 import { ContactoFooter } from "../Core/ContactoFooter";
+import { useParams } from "react-router-dom";
 
-export const ServiciosNotariales = ({
-  titulo = "Desarrollo Inmobiliario",
-  pestaña = "Servicios",
-  banner = "https://cdn.prod.website-files.com/6747ae021bab1a092e992b6c/6747b02df78bad8dafc47e23_sala-de-firmas-notaria-llausas-200.jpg",
-  descripcion = "La Notaría 9 cuenta con amplia experiencia en operaciones dentro del sector de desarrollo inmobiliario en Córdoba. Desde la constitución de regímenes de propiedad en condominio, contratos de compraventa, donaciones, fideicomisos, entre otros. Asegurando siempre el profesionalismo en cada operación.",
-  objectContenido,
-}) => {
+export const ServiciosNotariales = ({ pestaña = "Servicios" }) => {
+  const { id } = useParams();
+
+  const servicio = objetoContenido.find((s) => s.id === id);
+  if (!servicio) return <p>service not available </p>;
   return (
     <div>
-      <ImageFitRectangle src={banner} height={"25rem"} width={"100%"} />
+      <ImageFitRectangle
+        src={servicio.imagen}
+        height={"25rem"}
+        width={"100%"}
+      />
       <div className="padding-global">
         <div>
           <span className="text-size-medium">
             Inicio <span>&gt;</span> {pestaña}
           </span>
-          <h1 className="heading-style-h1">{titulo}</h1>
+          <h1 className="heading-style-h1">{servicio.titulo}</h1>
         </div>
         <div>
-          <p className="text-size-medium">{descripcion}</p>
+          <p className="text-size-medium">{servicio.resumen}</p>
         </div>
       </div>
       <div className="padding-section-large"></div>
       <section>
-        <div id="section_servicios_layout">
+        {servicio.secciones.map((seccion, i) => (
+          <div key={i} className="itemsListado">
+            <div>
+              <h3 className="heading-style-h5">{seccion.titulo}</h3>
+            </div>
+            <p className="text-color-secondary">{seccion.contenido}</p>
+          </div>
+        ))}
+        {/* <div id="section_servicios_layout">
           <div className="itemsListado">
             <div>
               <h3 className="heading-style-h5">Adjudicaciones por herencia</h3>
@@ -97,7 +109,7 @@ export const ServiciosNotariales = ({
               desarrollo de cada una de ellas de manera individual. .
             </p>
           </div>
-        </div>
+        </div> */}
       </section>
       <ContactoFooter />
     </div>

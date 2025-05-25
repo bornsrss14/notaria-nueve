@@ -25,18 +25,20 @@ export const HeaderComponent = () => {
               </div>
               <ul className="submenu">
                 <li>
-                  <Link to="/desarrollo-inmobiliario">
+                  <Link to="servicios/desarrollo-inmobiliario">
                     Desarrollo Inmobiliario
                   </Link>
                 </li>
                 <li>
-                  <Link to="/sociedades-y-poderes">Sociedades y poderes</Link>
+                  <Link to="servicios/sociedades-y-poderes">
+                    Sociedades y poderes
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/vivienda">Vivienda</Link>
+                  <Link to="servicios/vivienda">Vivienda</Link>
                 </li>
                 <li>
-                  <Link to="/nuestros-servicios">Otros servicios</Link>
+                  <Link to="servicios/nuestros-servicios">Otros servicios</Link>
                 </li>
               </ul>
             </li>
