@@ -1,31 +1,65 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { IconChevronCompactUp } from "@tabler/icons-react";
 import ImageFitRectangle from "../Core/ImageFitRectangle";
 
 export const Footer = () => {
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
   function nowDate() {
     const now = new Date();
     const options = { day: "numeric", month: "long", year: "numeric" };
     return `Última actualización ${now.toLocaleDateString("es-ES", options)}`;
   }
+
   return (
     <div className="">
+      <div onClick={scrollToTop} className="to-top-btn">
+        <a href="#ds">
+          <IconChevronCompactUp size={32} color="blue" />
+        </a>
+      </div>
       <div className="grid-footer-four-sections">
         <div className="colegio-notarios-wrapper">
-          <h1>N9 LRG</h1>
-          <a
-            title="enlaces externos"
-            href="https://notariosveracruz.mx/directorio/"
-          >
-            <ImageFitRectangle
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Fcolegio.png?alt=media&token=dbb04603-7975-41e8-8f96-3e56845e242e"
-              }
-              width={"7rem"}
-              height={"3rem"}
-            />
-          </a>
+          <div className="">
+            <h1>N9 LRG</h1>
+            <a
+              title="enlaces externos"
+              href="https://notariosveracruz.mx/directorio/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ImageFitRectangle
+                src={
+                  "https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Fcolegio.png?alt=media&token=dbb04603-7975-41e8-8f96-3e56845e242e"
+                }
+                width={"7rem"}
+                height={"3rem"}
+              />
+            </a>
+          </div>
+          <div className="">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.veracruz.gob.mx/gaceta-oficial/"
+            >
+              <ImageFitRectangle
+                src={
+                  "https://www.veracruz.gob.mx/wp-content/themes/veracruz2022/images/footerEcudoVeracruz.png"
+                }
+                width={"3rem"}
+                height={"auto"}
+                title="Gaceta ofical"
+              />
+            </a>
+          </div>
         </div>
+
         <div className="menu-wrapper">
           <div>
             <ul className="display-lista-footer">

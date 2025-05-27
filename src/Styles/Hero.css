@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
-* {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -35,7 +39,19 @@ a {
   overflow: hidden;
   width: 100%;
 }
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.247rem; /* Mejora la legibilidad */
+}
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700; /* Usando la variante de negrita */
+  line-height: 2.4rem; /* Mejora la legibilidad */
+}
 .hero img {
   width: 100%;
   object-fit: contain;
@@ -58,27 +74,14 @@ a {
   clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Playfair Display", serif;
-}
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-family: "Playfair Display", serif;
-}
-
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  font-family: "Source Sans Pro", sans-serif;
 }
 
 .hero-button {
   background-color: var(--color-white);
   color: var(--color-dark-gray);
-  font-family: "Source Sans Pro", sans-serif;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
   text-decoration: none;
@@ -195,7 +198,6 @@ h3 {
 #lic-lilia {
   font-size: 1rem;
   font-weight: lighter;
-  font-family: "Source Sans Pro", sans-serif;
   letter-spacing: 0.07rem;
 }
 
@@ -250,7 +252,6 @@ h3 {
 }
 
 .fuente-secundaria {
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 0.83rem;
   color: var(--color-wine);
 }
@@ -349,10 +350,13 @@ h3 {
 }
 #flexx {
   display: grid;
-  grid-template-columns: 3rem 19rem;
+  grid-template-columns: 1fr 3fr;
+  /* grid-template-columns: 3rem 19rem; */
   align-items: center;
-  justify-content: center;
-  justify-content: left;
+  justify-items: center;
+}
+.container-contacto {
+  width: 100%;
 }
 .grid-footer-four-sections {
   display: grid;
@@ -360,8 +364,6 @@ h3 {
   justify-items: left;
   background-color: var(--color-not-nueve);
   padding: 3rem 6rem 4rem;
-  font-family: "Source Sans Pro", sans-serif;
-
   color: var(--color-white);
   width: 100%;
 }
@@ -374,7 +376,6 @@ h3 {
   flex-direction: row;
   gap: 7rem;
   background-color: var(--color-not-nueve);
-  font-family: "Source Sans Pro", sans-serif;
   color: var(--color-white);
 }
 .btn-contacto {
@@ -386,7 +387,6 @@ h3 {
   height: fit-content;
   width: fit-content;
   padding: 0.8rem 1rem;
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   background-color: var(--color-green);
   cursor: pointer;
@@ -431,7 +431,6 @@ h3 {
   color: #333;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: "Source Sans Pro", sans-serif;
 }
 .boldbold {
   font-weight: bold;
@@ -441,7 +440,6 @@ h3 {
 .faq-container {
   width: 100%;
   padding: 1.5rem 0;
-  font-family: "Poppins", sans-serif;
 }
 .faq-title {
   text-align: center;
@@ -475,7 +473,6 @@ h3 {
   cursor: pointer;
   color: rgb(57, 56, 56);
   display: flex;
-  font-family: "Poppins", sans-serif;
   justify-content: space-between;
   align-items: center;
 }
@@ -495,7 +492,6 @@ h3 {
   font-size: 16px;
   color: var(--gray);
   border-top: 1px solid #ccc;
-  font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
 .phone-mail-container {
@@ -506,10 +502,9 @@ h3 {
   height: fit-content;
   justify-content: center;
   align-items: center;
-  padding: 2.4rem 4rem;
+  padding: 2.4rem 3rem;
   gap: 1.1rem;
   border: 1px solid var(--color-dark-gray);
-  font-family: "Poppins", sans-serif;
 }
 .map-div {
   width: 100%;
@@ -534,7 +529,6 @@ h3 {
 .hours-main-wrapper {
   display: flex;
   font-size: 1rem;
-  font-family: "Poppins", sans-serif;
   align-items: left;
   gap: 1rem;
 }
@@ -667,14 +661,10 @@ html {
   transform: scale(1.05);
 }
 
-#title-faq * {
-  margin: 0;
-}
 #title-faq {
   position: sticky;
   top: 6rem;
   align-self: flex-start;
-  height: fit-content;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -682,16 +672,17 @@ html {
   align-items: center;
 }
 
+#title-faq * {
+  margin: 0.4rem;
+}
 .title-faq-p {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-light-black);
-  font-size: 3.5rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2.5rem;
 }
 .sub-title-faq {
   font-size: 1.125rem;
   font-weight: 100;
-  font-family: "Source Sans Pro", sans-serif;
 }
 
 .faq-wrapper-main {
@@ -699,7 +690,7 @@ html {
   max-width: 100%;
   display: grid;
   height: auto;
-  grid-template-columns: 27% 1fr;
+  grid-template-columns: 34% 1fr;
   padding: 2rem 9%;
 }
 
@@ -747,7 +738,6 @@ html {
   gap: 0.7rem;
   background-color: var(--color-white);
   width: 30rem;
-  font-family: "Poppins", sans-serif;
   justify-content: center;
   align-items: center;
 }
@@ -765,11 +755,9 @@ html {
 }
 .articulos-notariales h2,
 p {
-  margin: 0;
+  margin: 0.4rem;
 }
-.articulos-notariales p {
-  font-family: "Poppins", sans-serif;
-}
+
 .lowResImg {
   width: 100%;
   height: 100%;
@@ -906,7 +894,6 @@ p {
 }
 .text-size-medium {
   font-size: 1.14rem;
-  line-height: 1.67rem;
   color: var(--color-white);
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -994,4 +981,50 @@ p {
 
 .text-color-secondary {
   color: var(--text-color--text-secondary);
+}
+
+.colegio-notarios-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.to-top-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* EVERYTHING RELATED TO MEDIA QUERIES */
+/* mobile first */
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+  body {
+    background: rgb(249, 229, 233);
+  }
+  .our-services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .we-are-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }

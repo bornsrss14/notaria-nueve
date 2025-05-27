@@ -6,12 +6,12 @@ export const FAQComp = () => {
     {
       question: "¿Qué trámites puedo realizar en una notaría",
       answer:
-        "En una notaría puede realizar actos como compraventa de inmuebles, testamentos, constitución de sociedades, otorgamiento de poderes, cancelación de hipotecas, donaciones, entre otros. Todos estos actos se formalizan con plena validez legal",
+        "Compraventas, testamentos, poderes, constitución de sociedades, cancelación de hipotecas y otros actos con validez legal.",
     },
     {
       question: "¿Cuál es la diferencia entre un notario y un abogado?",
       answer:
-        "El notario es un profesional del derecho autorizado por el Estado para dar fe pública, es decir, para certificar actos y hechos con valor legal. A diferencia del abogado, el notario actúa como figura imparcial entre las partes.",
+        "Es un profesional del derecho autorizado por el Estado para certificar actos legales. A diferencia del abogado, actúa de forma imparcial entre las partes.",
     },
     {
       question: " ¿Necesito agendar cita para ser atendido?",
@@ -43,12 +43,12 @@ export const FAQComp = () => {
     {
       question: "¿Qué es un poder notarial y para qué sirve?",
       answer:
-        "Es un documento en el que una persona autoriza a otra para actuar en su nombre en ciertos actos legales o administrativos, como vender propiedades, abrir cuentas o firmar contratos.",
+        "Es un documento que permite a una persona autorizar a otra para actuar legalmente en su nombre, por ejemplo, para vender, firmar o hacer trámites.",
     },
     {
       question: "¿Cuánto cuesta un trámite notarial?",
       answer:
-        "Los costos varían según el tipo de trámite, el valor del inmueble (presentar escritura), y los derechos que establece la Ley del Notariado. Puede solicitar una cotización sin compromiso.",
+        "El costo varía según el trámite, el valor del inmueble y la normativa vigente. Solicite su cotización sin compromiso.",
     },
   ];
 
@@ -58,10 +58,8 @@ export const FAQComp = () => {
   return (
     <section className="faq-wrapper-main">
       <div id="title-faq">
-        <p className="title-faq-p">Preguntas frecuentes</p>
-        <p className="sub-title-faq">
-          Elige el tema de interés y encuentra respuestas rápidas.
-        </p>
+        <h1 className="title-faq-p">Preguntas frecuentes</h1>
+        <p className="sub-title-faq">Explora los temas más consultados </p>
       </div>
       <div className="faq-container">
         <div className="faq-list">

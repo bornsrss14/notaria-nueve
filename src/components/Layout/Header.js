@@ -2,18 +2,28 @@ import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import React, { useRef, useState } from "react";
 import LogoNotariaNueve from "../Core/LogoNotariaNueve";
 import { Link } from "react-router-dom";
+import ImageFitRectangle from "../Core/ImageFitRectangle";
+import { IconMenu2, IconX } from "@tabler/icons-react";
 
 export const HeaderComponent = () => {
   return (
     <>
       <header className="header">
         <Link to="/" className="logo-wrapper">
-          <LogoNotariaNueve />
+          <ImageFitRectangle
+            title={"logo-notaria-9"}
+            src={
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2zCu2kiZGUZaj7TJAax178d5E8fKJS5zw2A&s"
+            }
+            width={"3.2rem"}
+            height={"3.2rem"}
+          />
           <div className="logo-letters">
             <p id="not-nueve">Notaría Pública 9</p>
             <p id="lic-lilia">LIC. LILIA REYES GOMEZ</p>
           </div>
         </Link>
+        <button className="hamburger">{<IconMenu2 />}</button>
         <nav className="nav">
           <ul className="nav-list">
             <li>

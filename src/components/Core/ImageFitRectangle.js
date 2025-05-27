@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ImageFitRectangle = ({ src, width, height }) => {
+export const ImageFitRectangle = ({ src, width, height, title }) => {
   const imageStyle = {
     width: "100%",
     height: "100%",
@@ -14,7 +14,7 @@ export const ImageFitRectangle = ({ src, width, height }) => {
   };
   return (
     <div style={containerStyle}>
-      <img style={imageStyle} src={src} alt="dos" />
+      <img title={title} style={imageStyle} src={src} alt="dos" />
     </div>
   );
 };

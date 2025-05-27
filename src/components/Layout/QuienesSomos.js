@@ -79,11 +79,10 @@ export const QuienesSomos = () => {
                 <h3>Quienes somos</h3>
               </div>
               <p>
-                Somos una notaría comprometida con brindar asesoría legal clara,
-                profesional y cercana. Nuestro objetivo es ayudarte a formalizar
-                tus actos jurídicos con confianza y seguridad. Contamos con años
-                de experiencia y un equipo capacitado para apoyarte en todo
-                momento.
+                Nos comprometemos a ofrecer asesoría legal clara y profesional,
+                asegurando la formalización de tus actos jurídicos con confianza
+                y seguridad. Contamos con un equipo altamente capacitado y años
+                de experiencia para brindarte el apoyo que necesitas.
               </p>
               <p>CONOCENOS</p>
             </div>
