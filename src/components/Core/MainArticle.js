@@ -34,8 +34,8 @@ export const MainArticle = () => {
         </div>
         <div className="banner-img-article">
           <ImageFitRectangle
-            width={"620px"}
-            height={"300px"}
+            width="clamp(100%, 10vw, 720px)"
+            height="clamp(150px, 25vw, 300px)"
             src={
               "https://cdn.prod.website-files.com/6747ae021bab1a092e992b6c/6747dc6c4287b656e5dbaa46_2200x900-1799x899.jpg"
             }

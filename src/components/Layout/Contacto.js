@@ -72,6 +72,7 @@ const Contacto = () => {
           }
           Icono={IconMapPin}
         />
+
         <ContactItem
           typeDireccion={"Teléfonos"}
           description={"271 717 9911 - 271 272 5760"}

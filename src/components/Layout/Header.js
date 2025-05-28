@@ -6,6 +6,14 @@ import ImageFitRectangle from "../Core/ImageFitRectangle";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 
 export const HeaderComponent = () => {
+  const [toggleHamburger, setToggleHamburguer] = useState(true);
+  function handlerChangeIconHamburger() {
+    console.log(
+      "lo que uqiero hacer aqui es cambiar el estado de cerrado a abierto y vicebersa"
+    );
+    setToggleHamburguer(() => !toggleHamburger);
+    console.log(toggleHamburger);
+  }
   return (
     <>
       <header className="header">
@@ -23,8 +31,11 @@ export const HeaderComponent = () => {
             <p id="lic-lilia">LIC. LILIA REYES GOMEZ</p>
           </div>
         </Link>
-        <button className="hamburger">{<IconMenu2 />}</button>
-        <nav className="nav">
+        {/* Necesito una función manejadora del handlerChangeIconHamburger */}
+        <button onClick={handlerChangeIconHamburger} className="hamburger">
+          {toggleHamburger ? <IconMenu2 /> : <IconX />}
+        </button>
+        <nav className={`nav ${toggleHamburger ? "" : "open"}`}>
           <ul className="nav-list">
             <li>
               <div style={{ display: "flex", gap: ".5rem" }}>
