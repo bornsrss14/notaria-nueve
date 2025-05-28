@@ -33,6 +33,7 @@ export const OurServices = () => {
       description:
         "Proporcionan la redacción de mandatos legales que permiten a una persona representar en gestiones jurídicas, financieros o de negocios. Ya sea un mandato amplio o específico, garantizan su plena legalidad y adaptación a las necesidades del cliente.",
     },
+    /*
     {
       icon: IconUsers,
       advice: "Testamentos",
@@ -56,13 +57,13 @@ export const OurServices = () => {
       advice: "Adjudicaciones",
       description:
         "acto jurídico mediante el cual se formaliza la transferencia de propiedad de un bien a una persona. Puede referirse a la herencia, donde los herederos aceptan y se reparten los bienes del fallecido, o a la compraventa de un inmueble, donde se documenta la transferencia de propiedad a un nuevo dueño ",
-    },
+    }, */
   ];
   return (
     <div id="nuestros-servicios">
       <div className="our-services-wrapper">
         {/*Aquí se escribe el loop para gneerar todos los servicios apartir del array */}
-        <div id="special-section">
+        <div className="special-section">
           <h3>Nuestros Servicios</h3>
           <ReadMore />
         </div>

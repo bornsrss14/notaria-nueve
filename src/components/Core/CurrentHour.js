@@ -131,7 +131,6 @@ export const CurrentHour = ({ WeeklyServiceHours }) => {
         }H | ${getMatchDay()?.rangos?.[1]?.open ?? ""}H - ${
           getMatchDay()?.rangos?.[1]?.close ?? ""
         }H`}
-
         <span className="openOrCloseTab">
           {displayHours ? (
             <IconChevronUp stroke={3} size={"1.2rem"} color="#8fd7de" />

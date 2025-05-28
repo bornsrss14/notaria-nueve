@@ -78,11 +78,17 @@ const Contacto = () => {
           description={"271 717 9911 - 271 272 5760"}
           Icono={IconPhone}
         />
+
         <ContactItem
+          typeDireccion={"Dirección"}
+          description={"notaria9_corvera@yahoo.com.mx"}
+          Icono={IconMapPin}
+        />
+        {/* <ContactItem
           typeDireccion={"Correo"}
           description={"notaria9_corvera@yahoo.com.mx"}
           Icono={IconMail}
-        />
+        /> */}
         <CurrentHour WeeklyServiceHours={WeeklyServiceHours} />
       </div>
     </div>

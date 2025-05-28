@@ -25,6 +25,9 @@
 a {
   text-decoration: none;
 }
+.titulo-preguntas-frecuentes {
+  display: none;
+}
 .hero {
   height: 84vh;
   background-size: cover;
@@ -244,8 +247,9 @@ h4 {
 .our-services-wrapper {
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   height: fit-content;
   width: 100%;
   padding: 1rem 0.7rem;
@@ -268,13 +272,13 @@ h4 {
   align-items: center;
   color: var(--color-wine);
 }
-#special-section {
+.special-section {
   height: 12rem;
   width: 18rem;
   padding: 1.44rem 0.9rem;
   border: 1px solid var(--color-light-gray);
 }
-#special-section p,
+.special-section p,
 h3 {
   margin: 0.2rem 0.3rem;
 }
@@ -354,16 +358,30 @@ h3 {
 .leaflet-popup-close-button {
   display: none !important;
 }
-#flexx {
+.flexx {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  /* grid-template-columns: 3rem 19rem; */
-  align-items: center;
-  justify-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.5rem 0;
 }
-.container-contacto {
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+}
+
+.contact-text h4,
+.contact-text p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+/* .container-contacto {
   width: 100%;
-}
+} */
 .grid-footer-four-sections {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -502,15 +520,16 @@ h3 {
 }
 .phone-mail-container {
   display: flex;
-  width: 100%;
-  max-width: 100%;
+  width: 90%;
+  max-width: 90%;
   flex-direction: column;
   height: fit-content;
   justify-content: center;
-  align-items: center;
-  padding: 2.4rem 3rem;
+  align-items: start;
+  padding: 2.4rem 2rem;
+  overflow: hidden;
   gap: 1.1rem;
-  border: 1px solid var(--color-dark-gray);
+  border: 1px solid var(--text-color--text-secondary);
 }
 .map-div {
   width: 100%;
@@ -522,12 +541,11 @@ h3 {
   display: grid;
   width: 100%;
   max-width: 100%;
-
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-content: center;
-  padding: 0 3.39rem;
+  padding: 0 2.9rem;
   margin: 2.3rem auto;
   height: fit-content;
 }
@@ -625,6 +643,7 @@ html {
 
 .icon-facilities {
   display: flex;
+
   flex-direction: column;
   align-items: center;
 }
@@ -697,13 +716,14 @@ html {
   display: grid;
   height: auto;
   grid-template-columns: 34% 1fr;
-  padding: 2rem 9%;
+  padding: 2rem 1%;
 }
 
 .renderizado-wrapper {
   height: auto;
   display: flex;
   gap: 1rem;
+  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -727,6 +747,15 @@ html {
 .contact-button:hover {
   background-color: #003580;
   transform: translateY(-2px);
+}
+.contact-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  justify-items: start;
+  align-items: center;
+
+  padding: 0.5rem 0;
 }
 
 .contact-button:active {
@@ -958,7 +987,8 @@ p {
 #section_servicios_layout {
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-column-gap: 4rem;
   grid-template-rows: auto;
   grid-row-gap: 2rem;
@@ -1012,6 +1042,23 @@ p {
 /* mobile first */
 
 @media (max-width: 768px) {
+  .contact-item {
+    grid-template-columns: 1fr 6fr;
+    grid-template-rows: auto auto;
+    text-align: left;
+  }
+  .special-section {
+    width: 100%;
+    height: auto;
+    padding: 0.8rem 0.9rem;
+  }
+  .each-service {
+    width: 80%;
+  }
+
+  .contact-icon {
+    margin-bottom: 0.5rem;
+  }
   .nav {
     display: none;
   }
@@ -1023,7 +1070,8 @@ p {
   }
   .our-services-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   }
   .we-are-section {
     display: flex;
@@ -1040,7 +1088,12 @@ p {
     max-width: 100%;
     flex-direction: column;
   }
-
+  /*MAP*/
+  .phone-mail-container {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+  }
   /* Seccion de ARTICULOS */
   .articulos {
     display: flex;
@@ -1060,6 +1113,19 @@ p {
   #inicio_articulos_item-content {
     display: flex;
     flex-direction: column;
+  }
+  /*  PREGUNTAS FRECUENTES */
+  .faq-wrapper-main {
+    display: flex;
+    flex-direction: column;
+  }
+  #title-faq {
+    display: none;
+  }
+  .titulo-preguntas-frecuentes {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 
   /* FOOTER */

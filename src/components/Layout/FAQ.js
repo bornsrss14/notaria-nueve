@@ -57,10 +57,16 @@ export const FAQComp = () => {
   };
   return (
     <section className="faq-wrapper-main">
-      <div id="title-faq">
-        <h1 className="title-faq-p">Preguntas frecuentes</h1>
+      <div className="titulo-preguntas-frecuentes" id="title-faq">
+        <h1 className="title-faq-p ">Preguntas frecuentes</h1>
         <p className="sub-title-faq">Explora los temas más consultados </p>
       </div>
+
+      <div className="titulo-preguntas-frecuentes">
+        <h1>Preguntas frecuentes</h1>
+        <p>Explora los temas más consultados </p>
+      </div>
+
       <div className="faq-container">
         <div className="faq-list">
           {faqsGenerales.map((faq, index) => (

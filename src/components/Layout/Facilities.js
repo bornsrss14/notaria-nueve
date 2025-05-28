@@ -11,17 +11,17 @@ import {
 
 const Facilities = () => {
   const facilities = [
-    { icon: <IconDisabled size={32} />, label: "Entrada accesible" },
+    { icon: <IconDisabled size={28} />, label: "Entrada accesible" },
     {
-      icon: <IconParkingCircleFilled size={32} />,
+      icon: <IconParkingCircleFilled size={28} />,
       label: "Estacionamiento cercano",
     },
-    { icon: <IconTemperatureSnow size={32} />, label: "Oficina climatizada" },
-    { icon: <IconBrandCouchdb size={32} />, label: "Sala de espera cómoda" },
-    { icon: <IconWifi size={32} />, label: "Wi-Fi disponible" },
-    { icon: <IconBadgeWc size={32} />, label: "Sanitarios accesibles" },
+    { icon: <IconTemperatureSnow size={28} />, label: "Oficina climatizada" },
+    { icon: <IconBrandCouchdb size={28} />, label: "Sala de espera cómoda" },
+    { icon: <IconWifi size={28} />, label: "Wi-Fi disponible" },
+    { icon: <IconBadgeWc size={28} />, label: "Sanitarios accesibles" },
     {
-      icon: <IconBus size={32} />,
+      icon: <IconBus size={28} />,
       label: "Acceso por transporte público",
     },
   ];
