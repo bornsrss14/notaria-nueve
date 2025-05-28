@@ -1003,7 +1003,7 @@ p {
 
 .heading-style-h1 {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -1037,6 +1037,126 @@ p {
   border: none;
   cursor: pointer;
 }
+/* --------------- Contenedor principal --------------- */
+.gallery-wrapper {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* --------------- Botones de navegación --------------- */
+.gallery-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-button.left {
+  left: 0.5rem;
+}
+
+.gallery-button.right {
+  right: 0.5rem;
+}
+
+.gallery-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* --------------- Contenedor de scroll --------------- */
+.gallery-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+/* Opcional: quitar scrollbar visible en WebKit */
+.gallery-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* --------------- Cada tarjeta de imagen --------------- */
+.gallery-item {
+  flex: 0 0 clamp(200px, 25%, 350px);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 220px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Opcional: pequeño efecto al pasar el cursor */
+.gallery-item:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* --------------- Responsividad --------------- */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 0 0 80%;
+    height: 180px;
+  }
+
+  .gallery-button {
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* --------------- Modal --------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: white;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
 
 /* EVERYTHING RELATED TO MEDIA QUERIES */
 /* mobile first */
@@ -1055,7 +1175,20 @@ p {
   .each-service {
     width: 80%;
   }
-
+  .padding-global {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 5%;
+    text-justify: inter-word;
+  }
+  .inicio-servicios-servicio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .servicio-secciones-serv {
+    font-size: 2rem !important;
+  }
   .contact-icon {
     margin-bottom: 0.5rem;
   }
@@ -1103,9 +1236,7 @@ p {
   .paragraph-article {
     font-size: 0.9rem;
   }
-  .heading-style-h1 {
-    font-size: 1.3rem;
-  }
+
   #grid-main-article {
     display: flex;
     flex-direction: column;

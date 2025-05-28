@@ -17,14 +17,16 @@ export const ServiciosNotariales = ({ pestaña = "Servicios" }) => {
         width={"100%"}
       />
       <div className="padding-global">
-        <div>
+        <div className="inicio-servicios-servicio">
           <span className="text-size-medium">
             Inicio <span>&gt;</span> {pestaña}
           </span>
-          <h1 className="heading-style-h1">{servicio.titulo}</h1>
+          <h1 className="servicio-secciones-serv heading-style-h1">
+            {servicio.titulo}
+          </h1>
         </div>
         <div>
-          <p className="text-size-medium">{servicio.resumen}</p>
+          <p className=" text-size-medium">{servicio.resumen}</p>
         </div>
       </div>
       <div className="padding-section-large"></div>
