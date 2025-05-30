@@ -23,8 +23,8 @@ export const HeaderComponent = () => {
             src={
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2zCu2kiZGUZaj7TJAax178d5E8fKJS5zw2A&s"
             }
-            width={"3.2rem"}
-            height={"3.2rem"}
+            width={"3rem"}
+            height={"3rem"}
           />
           <div className="logo-letters">
             <p id="not-nueve">Notaría Pública 9</p>

@@ -1162,6 +1162,22 @@ p {
 /* mobile first */
 
 @media (max-width: 768px) {
+  .logo-letters {
+    width: 100%;
+    align-items: center;
+  }
+  #not-nueve {
+    font-size: 1.03rem;
+    text-align: center;
+  }
+  #lic-lilia {
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    text-align: center;
+  }
+  .header {
+    grid-template-columns: 19rem 1fr;
+  }
   .contact-item {
     grid-template-columns: 1fr 6fr;
     grid-template-rows: auto auto;
