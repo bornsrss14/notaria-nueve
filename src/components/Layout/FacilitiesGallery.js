@@ -88,8 +88,6 @@ const FacilitiesGallery = () => {
 
   return (
     <section>
-      <h2 style={{ marginBottom: "1rem" }}>Nuestras instalaciones</h2>
-
       <div className="gallery-wrapper">
         {/* Botón izquierda */}
         <button className="gallery-button left" onClick={scrollLeft}>

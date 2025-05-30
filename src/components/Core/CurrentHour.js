@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
+
 export const CurrentHour = ({ WeeklyServiceHours }) => {
   const [displayHours, setDisplayHours] = useState(false);
   const [today, setToday] = useState("");
   const [currentHour, setCurrentHour] = useState();
+
   useEffect(() => {
     const intervalo = setInterval(() => {
       setCurrentHour(getCurrentHour());
       setToday(getTodayDay());
-    }, 60000); // 60,000 ms = 1 minuto
+    }, 60000);
 
-    // Actualiza inmediatamente también al montar el componente
     setCurrentHour(getCurrentHour());
     setToday(getTodayDay());
 
-    return () => clearInterval(intervalo); // Limpia el intervalo al desmontar
+    return () => clearInterval(intervalo);
   }, []);
+
   function getCurrentHour() {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, "0");
-
     return `${hours}`;
   }
 
@@ -32,116 +33,180 @@ export const CurrentHour = ({ WeeklyServiceHours }) => {
       "miércoles",
       "jueves",
       "viernes",
-      "sabado",
+      "sábado",
     ];
-
     const now = new Date();
-    const dayNow = days[now.getDay()];
-    return dayNow;
+    return days[now.getDay()];
   }
 
   const horarios = [
     {
       day: "lunes",
-      rangos: [
+      ranges: [
         { open: "8", close: "14" },
         { open: "16", close: "18" },
       ],
     },
     {
       day: "martes",
-      rangos: [
+      ranges: [
         { open: "8", close: "14" },
         { open: "16", close: "18" },
       ],
     },
     {
       day: "miércoles",
-      rangos: [
+      ranges: [
         { open: "8", close: "14" },
         { open: "16", close: "18" },
       ],
     },
     {
       day: "jueves",
-      rangos: [
+      ranges: [
         { open: "8", close: "14" },
         { open: "16", close: "18" },
       ],
     },
     {
       day: "viernes",
-      rangos: [
+      ranges: [
         { open: "8", close: "14" },
         { open: "16", close: "18" },
       ],
     },
     {
       day: "sábado",
-      rangos: [
-        { open: "8", close: "14" },
+      ranges: [
+        { open: "9", close: "14" },
         { open: null, close: null },
       ],
     },
     {
       day: "domingo",
-      rangos: [
+      ranges: [
         { open: null, close: null },
         { open: null, close: null },
       ],
     },
   ];
-  function getMatchDay() {
-    const matchDay = horarios.find((days) =>
-      days.day.toLowerCase().includes(today.toLowerCase())
-    );
-    return matchDay;
+
+  function getEstadoHorario() {
+    const now = new Date();
+    const horaActual = now.getHours();
+    const minutosActuales = now.getMinutes();
+    const horaDecimal = horaActual + minutosActuales / 60;
+
+    const dias = [
+      "domingo",
+      "lunes",
+      "martes",
+      "miércoles",
+      "jueves",
+      "viernes",
+      "sábado",
+    ];
+    const todayIndex = now.getDay();
+
+    for (let i = 0; i < 7; i++) {
+      const dia = dias[(todayIndex + i) % 7];
+      const diaHorario = horarios.find((h) => h.day === dia);
+      if (!diaHorario) continue;
+
+      for (const rango of diaHorario.ranges) {
+        const openTo = parseFloat(rango.open);
+        const closeTo = parseFloat(rango.close);
+
+        if (isNaN(openTo) || isNaN(closeTo)) continue;
+
+        if (i === 0 && horaDecimal >= openTo && horaDecimal < closeTo) {
+          return {
+            abierto: true,
+            mensaje: `ABIERTO — Cierra hoy a las ${closeTo}H`,
+            color: "green",
+          };
+        }
+
+        if (i === 0 && horaDecimal < openTo) {
+          return {
+            abierto: false,
+            mensaje: `CERRADO — Abre hoy a las ${openTo}H`,
+            color: "red",
+          };
+        }
+
+        if (i > 0) {
+          return {
+            abierto: false,
+            mensaje: `CERRADO — Abre a las ${openTo}H el ${dia}`,
+            color: "red",
+          };
+        }
+      }
+    }
+
+    return {
+      abierto: false,
+      mensaje: "CERRADO:Sin horarios disponibles",
+      color: "red",
+    };
   }
+
   function handleConsola() {
-    setDisplayHours((prevState) => {
-      console.log("Estado previo", prevState);
-      return !prevState;
+    setDisplayHours((prev) => {
+      console.log("Estado previo", prev);
+      return !prev;
     });
   }
+
+  const estado = getEstadoHorario();
+
   return (
     <div onClick={handleConsola} className="renderizado-wrapper">
-      {/*Esto se renderiza en caso de ser falso  */}
       <div className="hours-main-wrapper">
-        {/* <p>Hours:</p>
-        <p className="openOrClose">ABIERTO</p>
-        <div className="groupSpan">
-          <span className="openOrCloseSpan">Cierra:</span> <span>1:00</span>
-          <span> AM /PM</span>{" "}
+        {/*primer mensaje  */}
+        <span style={{ color: estado.color }}>{estado.mensaje}</span>
+
+        {/* segundo mensaje */}
+        {/* <div className="">
+          <span className="hr-close-open">
+            {`Horarios de hoy (${today}): ${
+              horarios
+                .find((h) => h.day === today)
+                ?.rangos.map((r) =>
+                  r.open && r.close ? `${r.open}H - ${r.close}H` : null
+                )
+                .filter(Boolean)
+                .join(" | ") || "Sin atención"
+            }`}
+          </span>
+
           <span className="openOrCloseTab">
-            {" "}
-            <IconCaretDownFilled size={"1.2rem"} color="#8fd7de" />
+            {displayHours ? (
+              <IconChevronUp stroke={3} size={"1.2rem"} color="#8fd7de" />
+            ) : (
+              <IconChevronDown stroke={3} size={"1.2rem"} color="#8fd7de" />
+            )}
           </span>
         </div> */}
-        {/*  ~----------------------------------------------------------------------------------------*/}
-        {(currentHour >= getMatchDay()?.rangos?.[0]?.open &&
-          currentHour < getMatchDay()?.rangos?.[0]?.close) ||
-        (currentHour >= getMatchDay()?.rangos?.[1]?.open &&
-          currentHour < getMatchDay()?.rangos?.[1]?.close) ? (
-          <span style={{ color: "green" }}>ABIERTO</span>
-        ) : (
-          <span style={{ color: "red" }}>CERRADO</span>
-        )}
-        {`Abre hoy ${today} de ${getMatchDay()?.rangos?.[0]?.open ?? ""}H - ${
-          getMatchDay()?.rangos?.[0]?.close ?? ""
-        }H | ${getMatchDay()?.rangos?.[1]?.open ?? ""}H - ${
-          getMatchDay()?.rangos?.[1]?.close ?? ""
-        }H`}
         <span className="openOrCloseTab">
           {displayHours ? (
-            <IconChevronUp stroke={3} size={"1.2rem"} color="#8fd7de" />
+            <IconChevronUp
+              className="icon-chevron"
+              stroke={3}
+              size={"1.2rem"}
+              color="#044396"
+            />
           ) : (
-            <IconChevronDown stroke={3} size={"1.2rem"} color="#8fd7de" />
+            <IconChevronDown stroke={3} size={"1.2rem"} color="#044396" />
           )}
         </span>
       </div>
+
       <AnimatePresence>
         {displayHours && (
           <motion.div
+            className="hr-close-open"
             key="content"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}

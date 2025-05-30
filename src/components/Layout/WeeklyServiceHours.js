@@ -22,7 +22,7 @@ export const WeeklyServiceHours = ({ horarios, getMatchDay }) => {
         {horarios.map((day, index) => (
           <div key={index} className="single-range-hour border">
             <p style={{ fontWeight: "bold" }}>{day.day}</p>
-            {day.rangos.map((rango, index) => (
+            {day.ranges.map((rango, index) => (
               <div key={index}>
                 <p>
                   {rango.open ? (

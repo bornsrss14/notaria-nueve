@@ -7,7 +7,7 @@ export const ContactItem = ({ typeDireccion, description, Icono }) => {
       <Icono className="contact-icon" stroke={1} color="blue" />
       <div className="contact-text">
         <h4>{typeDireccion}:</h4>
-        <p>{description}</p>
+        <p className="break-text">{description}</p>
       </div>
     </div>
   );

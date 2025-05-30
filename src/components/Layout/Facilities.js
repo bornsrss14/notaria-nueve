@@ -30,18 +30,7 @@ const Facilities = () => {
     <div>
       <section id="facilities-wrapper">
         <h2>Nuestras instalaciones</h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
-            gap: "1.5rem",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            maxWidth: "100%",
-            marginTop: "2rem",
-          }}
-        >
+        <div className="our-facilities">
           {facilities.map((facility, index) => (
             <div key={index} className="icon-facilities">
               {facility.icon}
