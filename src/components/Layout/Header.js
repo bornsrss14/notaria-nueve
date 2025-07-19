@@ -1,6 +1,5 @@
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import React, { useRef, useState } from "react";
-import LogoNotariaNueve from "../Core/LogoNotariaNueve";
 import { Link } from "react-router-dom";
 import ImageFitRectangle from "../Core/ImageFitRectangle";
 import { IconMenu2, IconX } from "@tabler/icons-react";

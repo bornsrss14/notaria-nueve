@@ -17,10 +17,10 @@ export const Footer = () => {
   }
 
   return (
-    <div className="">
-      <div onClick={scrollToTop} className="to-top-btn">
-        <a href="#ds">
-          <IconChevronCompactUp size={32} color="blue" />
+    <div>
+      <div onClick={scrollToTop} className="to-top-btn float-up-down">
+        <a href="#">
+          <IconChevronCompactUp size={36} color="blue" />
         </a>
       </div>
       <div className="grid-footer-four-sections">

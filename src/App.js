@@ -13,10 +13,14 @@ import Vivienda from "./components/Layout/Vivienda";
 import NuestrosServicios from "./components/Layout/NuestrosServicios";
 import RelatedArticleCom from "./components/Core/RelatedArticle";
 import NosotrosComp from "./components/Layout/NosotrosComp";
+import { useEffect } from "react";
+import { ScrollToTop } from "./components/hooks/ScrollToTop";
+import DetailedArticle from "./components/Core/DetailedArticle";
 function App() {
   const { scrollYProgress } = useScroll();
   return (
     <Router>
+      <ScrollToTop />
       <HeaderComponent />
       {/* Scroll bar puedes dejarla aquí si es global */}
       <motion.div
@@ -35,7 +39,6 @@ function App() {
           overflow: "hidden",
         }}
       ></motion.div>
-
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/aviso-de-privacidad" element={<PrivacyNotice />}></Route>
@@ -47,9 +50,11 @@ function App() {
           path="articulos-notariales"
           element={<RelatedArticleCom />}
         ></Route>
-        <Route path="sobre-nosotros" element={<NosotrosComp />}>
-          {" "}
-        </Route>
+        <Route path="sobre-nosotros" element={<NosotrosComp />}></Route>
+        <Route
+          path="/detalle-articulo/:id"
+          element={<DetailedArticle />}
+        ></Route>
       </Routes>
       <Footer />
     </Router>

@@ -2,6 +2,8 @@ import React from "react";
 import MainArticle from "./MainArticle";
 import InicioArticulosItemContent from "./InicioArticulosItemContent";
 import BtnContacto from "./BtnContacto";
+import { allMainArticles } from "../hooks/allMainArticles";
+import { Link } from "react-router-dom";
 import { ContactoFooter } from "./ContactoFooter";
 
 export const RelatedArticleCom = () => {
@@ -23,12 +25,19 @@ export const RelatedArticleCom = () => {
       </div>
       <div id="inicio_articulos_item-content">
         {/* todos los articulos inicio_articulos_item-content */}
-        <InicioArticulosItemContent />
-        <InicioArticulosItemContent />
-        <InicioArticulosItemContent />
-        <InicioArticulosItemContent />
-        <InicioArticulosItemContent />
-        <InicioArticulosItemContent />
+        {allMainArticles.map((itemArticle) => {
+          return (
+            <Link
+              to={`/detalle-articulo/${itemArticle.id}`}
+              key={itemArticle.id}
+            >
+              <InicioArticulosItemContent
+                titleIteme={itemArticle.titleArticle}
+                contentItem={itemArticle.content}
+              />
+            </Link>
+          );
+        })}
       </div>
       <ContactoFooter />
     </div>

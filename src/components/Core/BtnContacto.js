@@ -5,7 +5,7 @@ export const BtnContacto = () => {
     <div className="btn-contacto">
       <p>Contáctanos</p>
       <div className="chat-button">
-        <IconMessage color="#fff" stroke={1.24} />
+        <IconMessage color="#fff" stroke={1.9} />
       </div>
     </div>
   );
