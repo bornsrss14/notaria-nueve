@@ -112,7 +112,7 @@ export const Footer = () => {
           <p>{nowDate()}</p>
         </div>
         <div className="foot-second">
-          <Link to="/aviso-de-privacidad">Aviso de Privacidad</Link> |
+          <Link to="/aviso-de-privacidad">aviso de privacidad </Link>
           <a href="/terminos-y-condiciones.html">FAQs</a>|
           <Link to="nuestra-historia">Historia</Link>|
           <Link to="directorio">Directorio</Link>
