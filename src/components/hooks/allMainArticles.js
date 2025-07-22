@@ -56,12 +56,6 @@ export const allMainArticles = [
       {
         subtitleParagraph: undefined,
         paragraph:
-          "¿Cuándo es pertinente consultar a un notario? No cabe duda de que se trata de una pregunta básica. Desafortunadamente, no suele ser una usualmente formulada en la región, por lo cual los notarios públicos en Mazatlán no sólo han perdido oportunidades de empleo, sino que muchas de sus funciones son desconocidas.",
-        list: [],
-      },
-      {
-        subtitleParagraph: undefined,
-        paragraph:
           "Dando enfoque a las circunstancias de educación notarial en la localidad, cabe mencionar un detalle relevante pero que tiende a pasar desapercibido: no sólo se generan casos de desinformación acerca de los servicios notariales por parte de particulares.",
         list: [],
       },

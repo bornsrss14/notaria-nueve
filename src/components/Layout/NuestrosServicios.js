@@ -8,12 +8,6 @@ export const NuestrosServicios = () => {
         <li>Todos nuestros servicios</li>
         <li>Todos nuestros servicios</li>
         <li>Todos nuestros servicios</li>
-        <li>Todos nuestros servicios</li>
-        <li>Todos nuestros servicios</li>
-        <li>Todos nuestros servicios</li>
-        <li>Todos nuestros servicios</li>
-        <li>Todos nuestros servicios</li>
-        <li>Todos nuestros servicios</li>
       </ul>
     </div>
   );

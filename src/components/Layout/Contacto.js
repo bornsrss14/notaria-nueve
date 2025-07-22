@@ -21,7 +21,7 @@ const Contacto = () => {
 
   return (
     <div className="main-contact-wrapper">
-      <div className="map-div">
+      <div id="horarios-servicio" className="map-div">
         <MapContainer center={position} zoom={17} style={style}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

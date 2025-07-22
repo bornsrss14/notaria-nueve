@@ -3,7 +3,7 @@ import React from "react";
 
 export const DetailedObjectArticle = ({ objectItem }) => {
   return (
-    <article style={{ margin: "2rem 0" }}>
+    <article style={{ margin: "2rem 2rem" }}>
       <h3>{objectItem.titleArticle}</h3>
       <p>
         <em>{objectItem.content}</em>

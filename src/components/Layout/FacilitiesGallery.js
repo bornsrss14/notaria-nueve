@@ -52,7 +52,7 @@ const imagesGallery = [
   },
 ];
 
-const FacilitiesGallery = () => {
+const FacilitiesGallery = ({ customHeight }) => {
   const scrollRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalSrc, setModalSrc] = useState("");
@@ -99,14 +99,14 @@ const FacilitiesGallery = () => {
           {imagesGallery.map((img, index) => (
             <div
               key={index}
-              className="gallery-item"
+              className={customHeight ? "gallery-item" : "gallery-item-large"}
               onClick={() => openModal(img.highRes)}
             >
               <BlurImage
                 lowRes={img.lowRes}
                 highRes={img.highRes}
                 alt={`Instalación ${index + 1}`}
-                height="220px"
+                height={customHeight ? "220px" : "1200px"}
               />
             </div>
           ))}

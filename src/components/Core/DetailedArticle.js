@@ -4,25 +4,28 @@ import { useParams } from "react-router-dom";
 
 import { allMainArticles } from "../hooks/allMainArticles";
 import { ContactoFooter } from "./ContactoFooter";
+import { bannerArticles } from "../hooks/bannerArticles";
 import DetailedObjectArticle from "./DetailedObjectArticle";
 import InicioArticulosItemContent from "./InicioArticulosItemContent";
 
 export const DetailedArticle = () => {
   const { id } = useParams();
-  const article = allMainArticles.find((item) => item.id === parseInt(id));
+  const article =
+    allMainArticles.find((item) => item.id === parseInt(id)) ||
+    bannerArticles.find((item) => item.id === parseInt(id));
   if (!article) {
     return <p>Article not found!</p>;
   }
   return (
     <div>
-      <div className="articulos">
+      {/* <div className="articulos">
         <div className="heading-style-h1">
           <h1>{article.titleArticle}</h1>
         </div>
         <div className="paragraph-article">
           <p>{article.content}</p>
         </div>
-      </div>
+      </div> */}
       <div>
         <MainArticle />
       </div>

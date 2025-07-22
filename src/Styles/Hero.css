@@ -47,14 +47,14 @@ body {
   line-height: 1.247rem; /* Mejora la legibilidad */
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700; /* Usando la variante de negrita */
-  line-height: 2.4rem; /* Mejora la legibilidad */
-}
+  font-weight: 700; 
+  line-height: 2.4rem; 
+} */
 .hero img {
   width: 100%;
   object-fit: contain;
@@ -115,7 +115,7 @@ h4 {
   transition: all 0.3s ease;
   grid-template-columns: 25rem 1fr;
   background-color: var(--color-white);
-  padding: 1rem 0.5rem 0.2rem;
+  padding: 0.5rem 3rem 0.5rem;
   text-align: center;
 }
 .nav {
@@ -166,6 +166,7 @@ h4 {
 
 .nav-list a:hover {
   color: var(--color-not-nueve);
+  font-weight: 600;
 }
 
 /* Logo Notaria 9 */
@@ -391,6 +392,7 @@ h3 {
   padding: 3rem 6rem 4rem;
   color: var(--color-white);
   width: 100%;
+  border: 2px solid rgba(248, 242, 242, 0.061);
 }
 
 .footer-main {
@@ -877,10 +879,26 @@ p {
   font-weight: 600;
 }
 .background-articles {
-  font-family: "Source Sans Pro", sans-serif;
-  background-color: var(--color-light-gray);
-  padding: 2rem 0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
+.carousel-track {
+  display: flex;
+  transition: transform 0.5 ease-in-out;
+  width: 100%;
+}
+.slide {
+  min-width: 100%;
+  height: 200px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: white;
+}
+
 #grid-main-article * {
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -931,6 +949,7 @@ p {
   -webkit-box-orient: vertical;
   font-family: "Source Sans Pro", sans-serif;
   -webkit-line-clamp: 3;
+  line-clamp: 3; /* propiedad estándar */
   font-size: 1rem;
   color: var(--color-dark-gray);
   overflow: hidden;
@@ -1010,7 +1029,7 @@ p {
   color: var(--color-white);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 4rem 8rem;
+  padding: 4rem 0rem;
   align-items: center;
 }
 
@@ -1031,12 +1050,6 @@ p {
   font-size: 1.5rem;
 }
 
-.heading-style-h1 {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.7rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
 .itemsListado {
   width: fit-content;
   min-width: 20rem;
@@ -1058,8 +1071,10 @@ p {
 .to-top-btn {
   width: 100%;
   display: flex;
+  background-color: #0f0377;
   align-items: center;
   justify-content: center;
+  padding: 1rem 0 1rem;
 }
 .hamburger {
   display: none;
@@ -1121,14 +1136,23 @@ p {
 
 /* --------------- Cada tarjeta de imagen --------------- */
 .gallery-item {
-  flex: 0 0 clamp(200px, 25%, 350px);
   border-radius: 0.5rem;
+  flex: 0 0 clamp(200px, 25%, 350px);
   overflow: hidden;
   height: 220px;
   position: relative;
   cursor: pointer;
 }
-
+.gallery-item-large {
+  border-radius: 0.5rem;
+  flex: 0 0 clamp(100%, 25%, 350px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 620px;
+  position: relative;
+  cursor: pointer;
+}
 /* Opcional: pequeño efecto al pasar el cursor */
 .gallery-item:hover {
   transform: scale(1.02);
@@ -1229,7 +1253,7 @@ p {
   .padding-global {
     display: flex;
     flex-direction: column;
-    padding: 4rem 5%;
+    padding: 4rem 4rem;
     text-justify: inter-word;
   }
   .inicio-servicios-servicio {
@@ -1429,4 +1453,123 @@ p {
   100% {
     transform: translateY(0);
   }
+}
+
+.nosotros_sobre-nosotros-item {
+  border: 1px solid var(--border-color--border-primary);
+  background-color: #0000000d;
+  width: 100%;
+  min-height: 14rem;
+  padding: 1.5rem;
+}
+
+.submenu-about-us {
+  grid-column-gap: 3rem;
+  grid-row-gap: 4rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  place-items: stretch start;
+  display: grid;
+  margin: 0% 5%;
+}
+
+.padding-section-large {
+  padding-top: 4rem;
+}
+.heading-style-h3 {
+  font-family: Gilmer, Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.heading-style-h1 {
+  font-family: Gilmer, Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+}
+.padding-global {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.nosotros_gallery_content {
+  display: grid;
+  grid-column-gap: 5rem;
+  grid-auto-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.nuestras-oficinas-color {
+  color: black;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  min-width: 400px;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.team-photo {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-info {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.team-info * {
+  padding: 0;
+  margin: 0;
+}
+
+.team-name {
+  font-size: 1rem;
+  color: #555;
+}
+.notario-name {
+  font-size: 1rem;
+  color: red;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.cordoba-ver {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.bg-color-white {
+  background-color: white !important;
+  color: black !important;
+}
+.conoce-equip-title {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 4rem;
+}
+
+.main-contact-form {
+  display: grid;
 }

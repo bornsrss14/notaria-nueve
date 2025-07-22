@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { IconChevronCompactUp } from "@tabler/icons-react";
 import ImageFitRectangle from "../Core/ImageFitRectangle";
@@ -18,9 +17,13 @@ export const Footer = () => {
 
   return (
     <div>
-      <div onClick={scrollToTop} className="to-top-btn float-up-down">
-        <a href="#">
-          <IconChevronCompactUp size={36} color="blue" />
+      <div onClick={scrollToTop} className="to-top-btn ">
+        <a href="#as">
+          <IconChevronCompactUp
+            className="float-up-down"
+            size={36}
+            color="white"
+          />
         </a>
       </div>
       <div className="grid-footer-four-sections">

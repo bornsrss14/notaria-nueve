@@ -5,15 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { motion, useScroll } from "motion/react";
 import Home from "./components/Layout/Home";
 import HeaderComponent from "./components/Layout/Header";
-import DirectorioComp from "./components/Layout/Directorio";
+import FormContacto from "./components/Layout/FormContacto";
 import NuestraHistoria from "./components/Layout/OurStory";
 import ServiciosNotariales from "./components/Layout/ServiciosNotariales";
-import SociedadesYPoderes from "./components/Layout/SociedadesYPoderes";
-import Vivienda from "./components/Layout/Vivienda";
-import NuestrosServicios from "./components/Layout/NuestrosServicios";
 import RelatedArticleCom from "./components/Core/RelatedArticle";
 import NosotrosComp from "./components/Layout/NosotrosComp";
-import { useEffect } from "react";
 import { ScrollToTop } from "./components/hooks/ScrollToTop";
 import DetailedArticle from "./components/Core/DetailedArticle";
 function App() {
@@ -42,7 +38,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/aviso-de-privacidad" element={<PrivacyNotice />}></Route>
-        <Route path="directorio" element={<DirectorioComp />}></Route>
+        <Route path="/formulario-contacto" element={<FormContacto />}></Route>
         <Route path="nuestra-historia" element={<NuestraHistoria />}></Route>
         <Route path="/servicios/:id" element={<ServiciosNotariales />}></Route>
 

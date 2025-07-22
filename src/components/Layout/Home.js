@@ -17,7 +17,7 @@ export const Home = () => {
       <OurServices />
       <Contacto />
       <Facilities />
-      <FacilitiesGallery />
+      <FacilitiesGallery customHeight={"220px"} />
       <FAQComp />
     </div>
   );

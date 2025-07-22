@@ -5,6 +5,8 @@ import BtnContacto from "./BtnContacto";
 import { allMainArticles } from "../hooks/allMainArticles";
 import { Link } from "react-router-dom";
 import { ContactoFooter } from "./ContactoFooter";
+import CarouselArticles from "./CarouselArticles";
+import { bannerArticles } from "../hooks/bannerArticles";
 
 export const RelatedArticleCom = () => {
   return (
@@ -21,7 +23,7 @@ export const RelatedArticleCom = () => {
         </div>
       </div>
       <div>
-        <MainArticle />
+        <CarouselArticles />
       </div>
       <div id="inicio_articulos_item-content">
         {/* todos los articulos inicio_articulos_item-content */}

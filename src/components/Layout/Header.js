@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import ImageFitRectangle from "../Core/ImageFitRectangle";
 import { IconMenu2, IconX } from "@tabler/icons-react";
+import LogoNotary from "../Core/LogoNotary";
 
 export const HeaderComponent = () => {
   const [toggleHamburger, setToggleHamburguer] = useState(true);
@@ -16,20 +17,7 @@ export const HeaderComponent = () => {
   return (
     <>
       <header className="header">
-        <Link to="/" className="logo-wrapper">
-          <ImageFitRectangle
-            title={"logo-notaria-9"}
-            src={
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2zCu2kiZGUZaj7TJAax178d5E8fKJS5zw2A&s"
-            }
-            width={"3rem"}
-            height={"3rem"}
-          />
-          <div className="logo-letters">
-            <p id="not-nueve">Notaría Pública 9</p>
-            <p id="lic-lilia">LIC. LILIA REYES GOMEZ</p>
-          </div>
-        </Link>
+        <LogoNotary />
         {/* Necesito una función manejadora del handlerChangeIconHamburger */}
         <button onClick={handlerChangeIconHamburger} className="hamburger">
           {toggleHamburger ? <IconMenu2 /> : <IconX />}
@@ -66,7 +54,7 @@ export const HeaderComponent = () => {
               <Link to="/sobre-nosotros">Nosotros</Link>
             </li>
             <li>
-              <Link to="/directorio">Directorio</Link>
+              <a href="/#horarios-servicio">Horarios</a>
             </li>
             <li>
               <a href="#secc4">FAQ</a>
@@ -75,7 +63,9 @@ export const HeaderComponent = () => {
               <Link to="/articulos-notariales"> Articulos</Link>
             </li>
           </ul>
-          <button className="contact-button">Contacto</button>
+          <button className="contact-button">
+            <Link to="/formulario-contacto">Contacto</Link>
+          </button>
         </nav>
       </header>
     </>
