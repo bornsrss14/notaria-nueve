@@ -126,6 +126,7 @@ h4 {
   position: relative;
   list-style: none;
   display: flex;
+  align-items: center;
   padding: 0;
   color: var(--color-dark-gray);
   margin: 0;
@@ -752,7 +753,6 @@ html {
   font-weight: 500;
   border: none;
   border-radius: 8px;
-  align-self: center;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -1570,6 +1570,99 @@ p {
   padding-bottom: 4rem;
 }
 
+.section-form {
+  padding: 8rem 4rem;
+  width: 100%;
+  overflow: hidden;
+}
 .main-contact-form {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.main-contact-form > * {
+  padding: 2rem 2rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+.item-contacto {
+  margin: 1.5rem 0rem 0rem;
+  border-bottom: 1px solid rgba(74, 72, 72, 0.181);
+}
+
+/* formulario de contacto */
+.form-contacto {
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", sans-serif;
+  display: grid;
+  gap: 0.7rem;
+}
+
+#contact-fieldset {
+  border: 1px solid rgba(0, 0, 0, 0.307);
+  padding: 0rem 1rem 1rem;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+.contact-legend {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+.contact-label {
+  display: block;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fafafa;
+}
+.contact-textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+div > label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+span a {
+  color: #1e88e5;
+  text-decoration: underline;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0077cc;
+  background-color: #fff;
+}
+
+.div-captcha-btn-env {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
 }

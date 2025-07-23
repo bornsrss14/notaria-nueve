@@ -1,5 +1,6 @@
 import React from "react";
 import BtnContacto from "./BtnContacto";
+import { Link } from "react-router-dom";
 
 export const ContactoFooter = () => {
   return (
@@ -14,7 +15,9 @@ export const ContactoFooter = () => {
         </p>
       </div>
       <div>
-        <BtnContacto />
+        <Link to="/formulario-contacto">
+          <BtnContacto />
+        </Link>
       </div>
     </section>
   );
