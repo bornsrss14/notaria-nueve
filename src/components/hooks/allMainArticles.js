@@ -2,6 +2,9 @@ export const allMainArticles = [
   {
     id: 1000,
     titleArticle: "¿Cuál es la función de un Notario?",
+    subTitleArticle: "Conoce realmente quienes son",
+    bannerArticle:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD7fS7SaYJeR7lufGKmnn0JopYWdSinKg_LDg7mwDJg4q9Ok1fKxJlGN_vWEOLQP6S59g&usqp=CAU",
     content:
       "Es común ir por la calle y observar anuncios que citan: “Notario Público No. ###” Todos sabemos que fungen como funcionarios públicos pero, ¿sabemos lo que realmente hacen por nosotros?",
     paragrapsArticle: [
@@ -48,9 +51,12 @@ export const allMainArticles = [
   },
   {
     id: 1002,
-    titleArticle: "¿Cuándo consultar a un Notario?",
+    titleArticle: "¿Qué es un testamento?",
+    subTitleArticle: " ¿Por qué hacer un testamento?",
+    bannerArticle:
+      "https://cdn2.mediotiempo.com/uploads/media/2020/09/08/testamento-instrumento-legal-otorgado-notario.jpg",
     content:
-      "¿Cuándo es pertinente consultar a un notario? No cabe duda de que se trata de una pregunta básica. Desafortunadamente, no suele ser una usualmente formulada en la región, por lo cual los notarios públicos en Mazatlán no sólo han perdido oportunidades de empleo, sino que muchas de sus funciones son desconocidas.",
+      "Un testamento es un documento legal donde una persona, en pleno uso de sus facultades, dispone el destino de sus bienes y derechos tras su fallecimiento.",
 
     paragrapsArticle: [
       {
@@ -95,6 +101,9 @@ export const allMainArticles = [
   {
     id: 1003,
     titleArticle: "¿Cómo conseguir una vivienda?",
+    subTitleArticle: "Hipotecas, escrituraciones...",
+    bannerArticle:
+      "https://media.informabtl.com/wp-content/uploads/2020/12/1cb2927b-bigstock-the-gray-roof-house-is-placed-350287879.jpg",
     content:
       "¿Alguna vez te has preguntado como adquirir una vivienda?, o en nuestro ejemplo, ¿Como un notario en Mazatlán me puede ayudar a adquirir una vivienda?. Este no es un tema fácil, a todos nos emociona saber que pronto obtendremos un patrimonio, pero antes, es necesario contar con un buen notario.",
     paragrapsArticle: [
@@ -145,6 +154,9 @@ export const allMainArticles = [
   {
     id: 1004,
     titleArticle: "El notario y la creación de empresas",
+    subTitleArticle: "El papel importante",
+    bannerArticle:
+      "https://cdn2.mediotiempo.com/uploads/media/2020/09/08/testamento-instrumento-legal-otorgado-notario.jpg",
     content:
       "De acuerdo con lo que dispone la Ley, el acto constitutivo de una sociedad mercantil debe formalizarse ante notario. El notario dará fe pública de la constitución de la Sociedad a través de la redacción de la escritura constitutiva la que comprende los estatutos sociales, en los que se definen el tipo de sociedad que se formará, así como los derechos y obligaciones que los socios adquieren.",
     paragrapsArticle: [
@@ -176,9 +188,54 @@ export const allMainArticles = [
   },
   {
     id: 1005,
-    titleArticle: "El notariado público en Córdoba",
+    titleArticle: "Donar en vida o heredar",
+    subTitleArticle: " ¿Por qué hacer un testamento?",
+    bannerArticle:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD7fS7SaYJeR7lufGKmnn0JopYWdSinKg_LDg7mwDJg4q9Ok1fKxJlGN_vWEOLQP6S59g&usqp=CAU",
     content:
-      "El notario público en Córdoba tiene la misión de contribuir al óptimo desempeño de la función notarial en el municipio, caracterizándose por su intachable ética y alto profesionalismo para con los ciudadanos mazatlecos.",
+      "Conoce las opciones para asegurar el bienestar de tus seres queridos, eligiendo entre donar en vida o heredar después.",
+
+    paragrapsArticle: [
+      {
+        subtitleParagraph: undefined,
+        paragraph:
+          "Muchos estados de la república frenaron sus actividades notariales; pese a la reciente situación de la pandemia, la actividad notarial en nuestra ciudad no se detuvo, ya  que todo notario público en Mazatlán operó bajo ciertas medidas y reestricciones por apego al protocolo de salud instaurado debido a la pandemia de Covid-19 que azotó la localidad, así como al resto del mundo, durante los últimos meses.",
+        list: [],
+      },
+      {
+        subtitleParagraph: undefined,
+        paragraph:
+          "No obstante, cabe mencionar que el gremio notarial se vio afectado debido a que sus actividades fueron descritas como funciónes “esctrictamente no escencial” por parte de la población y ciertos organismos.",
+        list: [],
+      },
+      {
+        subtitleParagraph: undefined,
+        paragraph:
+          "Sin embargo,  si bien la actividad notarial como tal no se encuentra de manera expresa establecida como “actividad esencial”, si se encuentra íntimamente vinculada con otras que se encuentran dentro de la clasificación de esenciales, especialmente con aquellas relacionadas a los sectores económicos, como son los financieros,  por lo cual resultó primordial mantener la prestación de los servicios notariales, particularmente en aquellos actos que mantuvieran relación con el desarrollo las actividades declaradas como esenciales para un funcionamiento económico sostenible durante la crisis.",
+        list: [],
+      },
+      {
+        subtitleParagraph: undefined,
+        paragraph:
+          "El licenciado Rodrigo Llausás Azcona, presidente del Consejo de Notarios de Sinaloa y orgulloso notario público en Mazatlán expresó: “El objetivo de la actividad notarial es garantizar certidumbre jurídica a las personas que así lo requieren. La actividad notarial es una función de primera necesidad para el hombre, tanto en su persona como en sus negocios”.",
+        list: [],
+      },
+      {
+        subtitleParagraph: undefined,
+        paragraph:
+          "Sin importar las adversidades, el notario público en Mazatlán, Sinaloa y México tiene como objetivo garantizar la certidumbre jurídica de los individuos que la requieran, demostrando así que la notaría es, en efecto, una función de primera necesidad en nuestra sociedad.",
+        list: [],
+      },
+    ],
+  },
+  {
+    id: 1006,
+    titleArticle: "Protege tu patrimonio",
+    subTitleArticle: " Pequeño titulo",
+    bannerArticle:
+      "https://media.informabtl.com/wp-content/uploads/2020/12/1cb2927b-bigstock-the-gray-roof-house-is-placed-350287879.jpg",
+    content:
+      "Conoce por qué escriturar una propiedad es fundamental para garantizar tu seguridad legal y evitar problemas futuros.",
 
     paragrapsArticle: [
       {

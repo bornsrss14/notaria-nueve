@@ -33,15 +33,15 @@ export const SingleArticle = ({ articleObject }) => {
 
           <BlurImage
             lowRes="https://firebasestorage.googleapis.com/v0/b/bornsrss-8ab5d.appspot.com/o/notary-nine%2Flow-res-blur.jpg?alt=media&token=c84fb025-091e-4a38-8959-18a1741190e1"
-            highRes={articleObject.imgArticle}
-            alt={articleObject.altArticle}
+            highRes={articleObject.bannerArticle}
+            alt={articleObject.bannerArticle}
             height="100%"
             width="100%"
             loading="lazy"
           />
         </div>
 
-        <p style={styleP}>{articleObject.briefDescription}</p>
+        <p style={styleP}>{articleObject.content}</p>
         <div className="stick-bottom ">
           <ReadMore />
         </div>
