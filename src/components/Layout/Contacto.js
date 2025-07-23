@@ -80,7 +80,7 @@ const Contacto = () => {
         />
 
         <ContactItem
-          typeDireccion={"Dirección"}
+          typeDireccion={"Correo electrónico"}
           description={"notaria9_corvera@yahoo.com.mx"}
           Icono={IconMapPin}
         />

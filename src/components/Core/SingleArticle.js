@@ -2,6 +2,7 @@ import React from "react";
 import { LogoNotariaNueve } from "./LogoNotariaNueve";
 import ReadMore from "../Core/ReadMore";
 import BlurImage from "../Layout/BlurImage";
+import { Link } from "react-router-dom";
 export const SingleArticle = ({ articleObject }) => {
   const styleP = {
     marginTop: "19px",
@@ -41,9 +42,13 @@ export const SingleArticle = ({ articleObject }) => {
           />
         </div>
 
-        <p style={styleP}>{articleObject.content}</p>
+        <p className="text-style-item" style={styleP}>
+          {articleObject.content}
+        </p>
         <div className="stick-bottom ">
-          <ReadMore />
+          <Link to={`/detalle-articulo/${articleObject.id}`}>
+            <ReadMore />
+          </Link>
         </div>
       </article>
     </>

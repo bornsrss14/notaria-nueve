@@ -1,7 +1,7 @@
 export const allMainArticles = [
   {
     id: 1000,
-    titleArticle: "¿Cuál es la función de un Notario?",
+    titleArticle: "¿Cuál es la función?",
     subTitleArticle: "Conoce realmente quienes son",
     bannerArticle:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD7fS7SaYJeR7lufGKmnn0JopYWdSinKg_LDg7mwDJg4q9Ok1fKxJlGN_vWEOLQP6S59g&usqp=CAU",
@@ -52,7 +52,7 @@ export const allMainArticles = [
   {
     id: 1002,
     titleArticle: "¿Qué es un testamento?",
-    subTitleArticle: " ¿Por qué hacer un testamento?",
+    subTitleArticle: " Y por qué hacer uno",
     bannerArticle:
       "https://cdn2.mediotiempo.com/uploads/media/2020/09/08/testamento-instrumento-legal-otorgado-notario.jpg",
     content:
