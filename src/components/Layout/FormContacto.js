@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import { IconPhone, IconMail, IconMapPin } from "@tabler/icons-react";
+import ReCAPTCHA from "react-google-recaptcha";
+import { useForm } from "@formspree/react";
 import { Link } from "react-router-dom";
 
 export const FormContacto = () => {
-  function onClick() {
-    console.log("Esto envía el formulario");
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const [aviso, setAviso] = useState(false);
+  const [state, handleSubmit] = useForm("mkgzjrpr");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
   }
+  const handleToggle = () => {
+    setAviso((prev) => !prev);
+  };
 
   const actosjuridicos = [
     "Poder notarial",
@@ -15,72 +24,133 @@ export const FormContacto = () => {
     "Otro...",
   ];
   return (
-    <div>
-      <div className="main-contact-form">
+    <div className="section-form">
+      <div className="main-contact-form ">
         <section>
-          <h1>Formulario</h1>
+          <p>¿Buscas más información?</p>
+          <h1>Contáctanos</h1>
+          <p>Envía el formulario con tus datos o contáctanos directamente</p>
+
+          <div>
+            <div className="item-contacto">
+              <div className="hours-main-wrapper">
+                <IconPhone />
+                <p>+52 (271) 717 9911</p>
+              </div>
+            </div>
+            <div className="item-contacto">
+              <div className="hours-main-wrapper">
+                <IconMail />
+                <p>notaria9_corvera@yahoo.com.mx</p>
+              </div>
+            </div>
+            <div className="item-contacto">
+              <div className="hours-main-wrapper">
+                <IconMapPin />
+                <p>
+                  CALLE 20 ENTRE AVENIDAS 13 y 15 #1303, Federal, 94570 Córdoba,
+                  Ver.
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
         <section>
-          <form onClick={onClick}>
-            <fieldset>
-              <legend>Información personal</legend>
-              <label>Nombre:</label>
-              <input placeholder="Ej. Anna Oh." type="text" id="name"></input>
+          <form
+            className="form-contacto"
+            onSubmit={(e) => {
+              if (!captchaValue) {
+                e.preventDefault();
+                alert("Please, verfy the reCAPTCHA");
+                return;
+              }
+              handleSubmit(e);
+            }}
+          >
+            <fieldset id="contact-fieldset">
+              <legend className="contact-legend">Información personal</legend>
+              <label className="contact-label">Nombre:</label>
+              <input
+                name="user_name"
+                placeholder="Ej. Anna Oh."
+                type="text"
+                id="name"
+                required
+              ></input>
               <label>Apellidos:</label>
-              <input placeholder="Ej. Escobar." type="text" id="name"></input>
+              <input
+                name="user_secondName"
+                placeholder="Ej. Escobar."
+                type="text"
+                id="name"
+                required
+              ></input>
             </fieldset>
-            <fieldset>
-              <legend>Contacto</legend>
+            <fieldset id="contact-fieldset">
+              <legend className="contact-legend">Contacto</legend>
 
               <label> e-mail</label>
-              <input type="email" placeholder="Ej. tuemail@icloud.com"></input>
-              <label>Telefono:</label>
-              <input></input>
+              <input
+                name="user_email"
+                type="email"
+                placeholder="Ej. tuemail@icloud.com"
+                required
+              ></input>
             </fieldset>
-            <fieldset>
-              <legend> Asunto / Trámite</legend>
+            <fieldset id="contact-fieldset">
+              <legend className="contact-legend"> Asunto / Trámite</legend>
               <label>Acto jurídico de Interés</label>
-              <select>
+              <select name="user_actojuridico" required>
                 {actosjuridicos.map((itemActo) => {
                   return <option> {itemActo} </option>;
                 })}
               </select>
               <label for="msg">Mensaje:</label>
               <textarea
+                className="contact-textarea"
                 placeholder="Introduzca un breve mensaje para comunicarnos con usted"
                 id="msg"
                 name="user_message"
               ></textarea>
             </fieldset>
-            <fieldset>
-              <legend> Ubicación</legend>
-              <label>¿Reside en Córdoba, Ver?</label>
-              <div>
-                <input type="checkbox" id="local" name="local" value="local" />
-                <label for="local"> Sí</label>
+
+            <div className="div-captcha-btn-env">
+              <div style={{ display: "flex", flexDirection: "row" }}>
                 <input
+                  onChange={handleToggle}
+                  name="user-check"
                   type="checkbox"
-                  id="foraneo"
-                  name="foraneo"
-                  value="foraneo"
+                  required
                 />
-                <label for="foraneo"> No, soy foraneo</label>
+                <label>
+                  He leído y acepto el{" "}
+                  <span>
+                    <Link to="/aviso-de-privacidad">aviso de privacidad </Link>
+                  </span>
+                </label>
               </div>
-            </fieldset>
-            <div>
-              <label>
-                He leído y acepto el{" "}
-                <span>
-                  <Link to="/aviso-de-privacidad">aviso de privacidad </Link>
-                </span>
-              </label>
-              <input type="checkbox" />
-              <div>
+              {aviso && (
                 <div>
-                  {" "}
-                  <h3>Captcha</h3>
+                  <ReCAPTCHA
+                    sitekey={process.env.REACT_APP_SITE_KEY}
+                    onChange={(value) => setCaptchaValue(value)}
+                  />
                 </div>
-              </div>
+              )}
+
+              <button
+                type="submit"
+                className="contact-button"
+                disabled={state.submitting}
+              >
+                {state.submitting ? "Enviando..." : "Enviar"}
+              </button>
+
+              {state.succeeded && (
+                <p style={{ color: "green" }}>
+                  ¡Gracias! Hemos recibido tu mensaje.
+                </p>
+              )}
             </div>
           </form>
         </section>
@@ -90,3 +160,4 @@ export const FormContacto = () => {
 };
 
 export default FormContacto;
+// Make sure to run npm install @formspree/react

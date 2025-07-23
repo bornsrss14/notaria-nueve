@@ -1,7 +1,6 @@
 import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import ImageFitRectangle from "../Core/ImageFitRectangle";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import LogoNotary from "../Core/LogoNotary";
 
@@ -62,10 +61,10 @@ export const HeaderComponent = () => {
             <li>
               <Link to="/articulos-notariales"> Articulos</Link>
             </li>
+            <Link className="" to="/formulario-contacto">
+              <button className="contact-button">Contacto</button>
+            </Link>
           </ul>
-          <button className="contact-button">
-            <Link to="/formulario-contacto">Contacto</Link>
-          </button>
         </nav>
       </header>
     </>
