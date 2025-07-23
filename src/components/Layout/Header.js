@@ -22,10 +22,14 @@ export const HeaderComponent = () => {
           {toggleHamburger ? <IconMenu2 /> : <IconX />}
         </button>
         <nav className={`nav ${toggleHamburger ? "" : "open"}`}>
-          <ul className="nav-list">
+          <ul className="nav-list ">
             <li>
-              <div style={{ display: "flex", gap: ".5rem" }}>
-                <a href="#secc1">Servicios</a>
+              <div
+                style={{ display: "flex", gap: ".5rem", alignItems: "center" }}
+              >
+                <a className="font-navs" href="#secc1">
+                  Servicios
+                </a>
                 <div>
                   <IconChevronDown stroke={1} color="blue" size={24} />
                 </div>
@@ -50,16 +54,25 @@ export const HeaderComponent = () => {
               </ul>
             </li>
             <li>
-              <Link to="/sobre-nosotros">Nosotros</Link>
+              <Link className="font-navs" to="/sobre-nosotros">
+                Nosotros
+              </Link>
             </li>
             <li>
-              <a href="/#horarios-servicio">Horarios</a>
+              <a className="font-navs" href="/#horarios-servicio">
+                Horarios
+              </a>
             </li>
             <li>
-              <a href="#secc4">FAQ</a>
+              <a className="font-navs" href="#secc4">
+                FAQ
+              </a>
             </li>
             <li>
-              <Link to="/articulos-notariales"> Articulos</Link>
+              <Link className="font-navs" to="/articulos-notariales">
+                {" "}
+                Articulos
+              </Link>
             </li>
             <Link className="" to="/formulario-contacto">
               <button className="contact-button">Contacto</button>
