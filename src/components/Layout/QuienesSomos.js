@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { SingleArticle } from "../Core/SingleArticle";
 import { IconLicense, IconGavel } from "@tabler/icons-react";
-
+import { allMainArticles } from "../hooks/allMainArticles";
 export const QuienesSomos = () => {
   const relatedArticles = [
     {
@@ -87,7 +87,7 @@ export const QuienesSomos = () => {
               <p>CONOCENOS</p>
             </div>
           </div>
-          {relatedArticles.map((article, index) => (
+          {allMainArticles.slice(0, 3).map((article, index) => (
             <SingleArticle
               counter={index}
               key={index}
