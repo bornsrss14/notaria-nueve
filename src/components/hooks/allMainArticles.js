@@ -4,7 +4,7 @@ export const allMainArticles = [
     titleArticle: "¿Cuál es la función?",
     subTitleArticle: "Conoce realmente quienes son",
     bannerArticle:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD7fS7SaYJeR7lufGKmnn0JopYWdSinKg_LDg7mwDJg4q9Ok1fKxJlGN_vWEOLQP6S59g&usqp=CAU",
+      "https://blog.circulobienesraices.com/wp-content/uploads/2021/09/notario-pu%CC%81blico-en-me%CC%81xico-cbr-alt-839x560.jpg",
     content:
       "Es común ir por la calle y observar anuncios que citan: “Notario Público No. ###” Todos sabemos que fungen como funcionarios públicos pero, ¿sabemos lo que realmente hacen por nosotros?",
     paragrapsArticle: [
@@ -156,7 +156,7 @@ export const allMainArticles = [
     titleArticle: "El notario y la creación de empresas",
     subTitleArticle: "El papel importante",
     bannerArticle:
-      "https://cdn2.mediotiempo.com/uploads/media/2020/09/08/testamento-instrumento-legal-otorgado-notario.jpg",
+      "https://definanzas.com/wp-content/uploads/2017/01/tipos-de-empresas-sociedades-istock.jpg",
     content:
       "De acuerdo con lo que dispone la Ley, el acto constitutivo de una sociedad mercantil debe formalizarse ante notario. El notario dará fe pública de la constitución de la Sociedad a través de la redacción de la escritura constitutiva la que comprende los estatutos sociales, en los que se definen el tipo de sociedad que se formará, así como los derechos y obligaciones que los socios adquieren.",
     paragrapsArticle: [
@@ -191,7 +191,7 @@ export const allMainArticles = [
     titleArticle: "Donar en vida o heredar",
     subTitleArticle: " ¿Por qué hacer un testamento?",
     bannerArticle:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD7fS7SaYJeR7lufGKmnn0JopYWdSinKg_LDg7mwDJg4q9Ok1fKxJlGN_vWEOLQP6S59g&usqp=CAU",
+      "https://www.icasas.mx/noticias/wp-content/uploads/2020/01/recibir-casa-herencia-sin-testamento.jpg",
     content:
       "Conoce las opciones para asegurar el bienestar de tus seres queridos, eligiendo entre donar en vida o heredar después.",
 

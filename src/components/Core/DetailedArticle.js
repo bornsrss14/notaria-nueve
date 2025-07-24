@@ -7,6 +7,7 @@ import { ContactoFooter } from "./ContactoFooter";
 import { bannerArticles } from "../hooks/bannerArticles";
 import DetailedObjectArticle from "./DetailedObjectArticle";
 import InicioArticulosItemContent from "./InicioArticulosItemContent";
+import MainSelectedArticleBanner from "./MainSelectedArticleBanner";
 
 export const DetailedArticle = () => {
   const { id } = useParams();
@@ -27,16 +28,18 @@ export const DetailedArticle = () => {
         </div>
       </div> */}
       <div>
-        <MainArticle />
+        <MainSelectedArticleBanner articleSelectedDetail={article} />
       </div>
       <div className="container-detailed-article">
         <section>
           <DetailedObjectArticle objectItem={article} />
         </section>
         <section className="articles-thumbnail">
-          {allMainArticles.slice(0, 4).map((item) => {
+          {allMainArticles.map((item) => {
             return (
               <InicioArticulosItemContent
+                key={item.id}
+                item={item}
                 contentItem={item.content}
                 titleIteme={item.titleArticle}
               />

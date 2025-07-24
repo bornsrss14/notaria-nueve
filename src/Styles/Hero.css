@@ -131,7 +131,6 @@ h4 {
 }
 .nav {
   display: flex;
-  justify-content: center;
 }
 .nav-list {
   position: relative;
@@ -881,6 +880,10 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.wrapper-mark-up-singleArticle {
+  display: flex;
+  flex-direction: column;
 }
 
 .mark-up-new p {

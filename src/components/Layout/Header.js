@@ -22,8 +22,8 @@ export const HeaderComponent = () => {
           {toggleHamburger ? <IconMenu2 /> : <IconX />}
         </button>
         <nav className={`nav ${toggleHamburger ? "" : "open"}`}>
-          <ul className="nav-list ">
-            <li>
+          <ul className="nav-list">
+            <li onClick={handlerChangeIconHamburger}>
               <div
                 style={{ display: "flex", gap: ".5rem", alignItems: "center" }}
               >
@@ -35,46 +35,49 @@ export const HeaderComponent = () => {
                 </div>
               </div>
               <ul className="submenu">
-                <li>
+                <li onClick={handlerChangeIconHamburger}>
                   <Link to="servicios/desarrollo-inmobiliario">
                     Desarrollo Inmobiliario
                   </Link>
                 </li>
-                <li>
+                <li onClick={handlerChangeIconHamburger}>
                   <Link to="servicios/sociedades-y-poderes">
                     Sociedades y poderes
                   </Link>
                 </li>
-                <li>
+                <li onClick={handlerChangeIconHamburger}>
                   <Link to="servicios/vivienda">Vivienda</Link>
                 </li>
-                <li>
+                <li onClick={handlerChangeIconHamburger}>
                   <Link to="servicios/nuestros-servicios">Otros servicios</Link>
                 </li>
               </ul>
             </li>
-            <li>
+            <li onClick={handlerChangeIconHamburger}>
               <Link className="font-navs" to="/sobre-nosotros">
                 Nosotros
               </Link>
             </li>
-            <li>
+            <li onClick={handlerChangeIconHamburger}>
               <a className="font-navs" href="/#horarios-servicio">
                 Horarios
               </a>
             </li>
-            <li>
+            <li onClick={handlerChangeIconHamburger}>
               <a className="font-navs" href="#secc4">
                 FAQ
               </a>
             </li>
-            <li>
+            <li onClick={handlerChangeIconHamburger}>
               <Link className="font-navs" to="/articulos-notariales">
                 {" "}
                 Articulos
               </Link>
             </li>
-            <Link className="" to="/formulario-contacto">
+            <Link
+              onClick={handlerChangeIconHamburger}
+              to="/formulario-contacto"
+            >
               <button className="contact-button">Contacto</button>
             </Link>
           </ul>

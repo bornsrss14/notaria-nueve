@@ -9,6 +9,7 @@ export const InicioArticulosItemContent = ({ contentItem, titleIteme }) => {
         <div className="text-style-item">
           <p>{contentItem}</p>
         </div>
+        <></>
         <div>
           <ReadMore />
         </div>
@@ -18,3 +19,6 @@ export const InicioArticulosItemContent = ({ contentItem, titleIteme }) => {
 };
 
 export default InicioArticulosItemContent;
+{
+  /* este componente aparece en relatedArticles, renderizado uno por uno */
+}
