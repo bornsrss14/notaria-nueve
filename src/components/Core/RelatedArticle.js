@@ -9,6 +9,8 @@ import CarouselArticles from "./CarouselArticles";
 import { bannerArticles } from "../hooks/bannerArticles";
 
 export const RelatedArticleCom = () => {
+  console.log("Artículos:", allMainArticles);
+
   return (
     <div>
       <div className="articulos">
