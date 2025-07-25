@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import MainArticle from "./MainArticle";
 import InicioArticulosItemContent from "./InicioArticulosItemContent";
 import BtnContacto from "./BtnContacto";
@@ -9,7 +9,7 @@ import CarouselArticles from "./CarouselArticles";
 import { bannerArticles } from "../hooks/bannerArticles";
 
 export const RelatedArticleCom = () => {
-  console.log("Artículos:", allMainArticles);
+  const [allArticles, setAllArticles] = useState(allMainArticles);
 
   return (
     <div>
@@ -29,7 +29,7 @@ export const RelatedArticleCom = () => {
       </div>
       <div id="inicio_articulos_item-content">
         {/* todos los articulos inicio_articulos_item-content */}
-        {allMainArticles.map((itemArticle) => {
+        {allArticles.map((itemArticle) => {
           return (
             <Link
               to={`/detalle-articulo/${itemArticle.id}`}

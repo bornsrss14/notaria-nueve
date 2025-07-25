@@ -237,7 +237,7 @@ export const allMainArticles = [
     content:
       "Conoce por qué escriturar una propiedad es fundamental para garantizar tu seguridad legal y evitar problemas futuros.",
 
-    paragrapsArticle: [
+    paragrapsArticle: [ 
       {
         subtitleParagraph: undefined,
         paragraph:

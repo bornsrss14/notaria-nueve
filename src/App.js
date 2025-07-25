@@ -12,6 +12,7 @@ import RelatedArticleCom from "./components/Core/RelatedArticle";
 import NosotrosComp from "./components/Layout/NosotrosComp";
 import { ScrollToTop } from "./components/hooks/ScrollToTop";
 import DetailedArticle from "./components/Core/DetailedArticle";
+import NotFound from "./components/Core/NotFound";
 function App() {
   const { scrollYProgress } = useScroll();
   return (
@@ -51,6 +52,7 @@ function App() {
           path="/detalle-articulo/:id"
           element={<DetailedArticle />}
         ></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />
     </Router>
