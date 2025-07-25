@@ -1,13 +1,14 @@
 import React from "react";
 import MainArticle from "./MainArticle";
 import { useParams } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 import { allMainArticles } from "../hooks/allMainArticles";
 import { ContactoFooter } from "./ContactoFooter";
 import { bannerArticles } from "../hooks/bannerArticles";
 import DetailedObjectArticle from "./DetailedObjectArticle";
 import InicioArticulosItemContent from "./InicioArticulosItemContent";
 import MainSelectedArticleBanner from "./MainSelectedArticleBanner";
+import RightItem from "./RightItem";
 
 export const DetailedArticle = () => {
   const { id } = useParams();
@@ -32,17 +33,20 @@ export const DetailedArticle = () => {
       </div>
       <div className="container-detailed-article">
         <section>
+          <div>ID del artículo: {id}</div>
           <DetailedObjectArticle objectItem={article} />
         </section>
+        {/* Aquí se renderizan los articulos de la derecha en miniatura */}
         <section className="articles-thumbnail">
-          {allMainArticles.map((item) => {
+          {allMainArticles.map((item, index) => {
             return (
-              <InicioArticulosItemContent
-                key={item.id}
-                item={item}
-                contentItem={item.content}
-                titleIteme={item.titleArticle}
-              />
+              <Link to={`/detalle-articulo/${1000 + index}`}>
+                <RightItem
+                  key={100 + index}
+                  contentItem={item.content}
+                  titleIteme={item.titleArticle}
+                />
+              </Link>
             );
           })}
         </section>
