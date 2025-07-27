@@ -20,10 +20,6 @@ const Facilities = () => {
     { icon: <IconBrandCouchdb size={28} />, label: "Sala de espera cómoda" },
     { icon: <IconWifi size={28} />, label: "Wi-Fi disponible" },
     { icon: <IconBadgeWc size={28} />, label: "Sanitarios accesibles" },
-    {
-      icon: <IconBus size={28} />,
-      label: "Acceso por transporte público",
-    },
   ];
 
   return (

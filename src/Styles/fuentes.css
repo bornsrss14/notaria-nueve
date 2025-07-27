@@ -1,0 +1,22 @@
+/* FUENTES PARA DISPOSITIVOS MOVILES 768px*/
+@media (min-width: 768px) {
+  .font-sz-welcome {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  .font-sz-legend {
+    font-size: 1.37rem;
+  }
+}
+
+/* FUENTES PARA DESKTOP 768px*/
+
+@media (max-width: 768px) {
+  .font-sz-welcome {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .font-sz-legend {
+    font-size: 1.2rem;
+  }
+}

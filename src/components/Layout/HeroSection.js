@@ -16,8 +16,21 @@ export const HeroSection = () => {
         </video>
         <div className="hero__overlay"></div>
         <div className="hero__content">
-          <h1>Bienvenida a la Notaría</h1>
-          <p>Tu confianza, nuestro compromiso</p>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: ".5rem" }}
+          >
+            <div className="box-messages">
+              <p className="font-sz-welcome">Tu confianza, </p>
+              <p className="font-sz-welcome"> nuestro compromiso.</p>
+            </div>
+            <p className="font-sz-legend">
+              Resolvemos tus dudas legales con trato cercano y profesional.
+            </p>
+          </div>
+          <div className="container-btns">
+            <button className="contact-button">Contáctanos</button>
+            <button className="contact-button-vol-2">Horarios</button>
+          </div>
         </div>
         {/* <img
           src=""

@@ -6,12 +6,14 @@ import LogoNotary from "../Core/LogoNotary";
 
 export const HeaderComponent = () => {
   const [toggleHamburger, setToggleHamburguer] = useState(true);
+  const [toggleSubmenu, setToggleSubmenu] = useState(false);
   function handlerChangeIconHamburger() {
-    console.log(
-      "lo que uqiero hacer aqui es cambiar el estado de cerrado a abierto y vicebersa"
-    );
     setToggleHamburguer(() => !toggleHamburger);
     console.log(toggleHamburger);
+  }
+
+  function handleToggleSubmenu() {
+    setToggleSubmenu((prev) => !prev);
   }
   return (
     <>
@@ -21,9 +23,9 @@ export const HeaderComponent = () => {
         <button onClick={handlerChangeIconHamburger} className="hamburger">
           {toggleHamburger ? <IconMenu2 /> : <IconX />}
         </button>
-        <nav className={`nav ${toggleHamburger ? "" : "open"}`}>
-          <ul className="nav-list">
-            <li onClick={handlerChangeIconHamburger}>
+        <nav className={`slide-bottom nav ${toggleHamburger ? "" : "open"}`}>
+          <ul className="nav-list fila-completa">
+            <li onClick={handleToggleSubmenu}>
               <div
                 style={{ display: "flex", gap: ".5rem", alignItems: "center" }}
               >
@@ -34,7 +36,11 @@ export const HeaderComponent = () => {
                   <IconChevronDown stroke={1} color="blue" size={24} />
                 </div>
               </div>
-              <ul className="submenu">
+              <ul
+                className={`submenu slide-bottom ${
+                  toggleSubmenu ? "submenu--active" : ""
+                }`}
+              >
                 <li onClick={handlerChangeIconHamburger}>
                   <Link to="servicios/desarrollo-inmobiliario">
                     Desarrollo Inmobiliario
