@@ -20,14 +20,6 @@ export const DetailedArticle = () => {
   }
   return (
     <div>
-      {/* <div className="articulos">
-        <div className="heading-style-h1">
-          <h1>{article.titleArticle}</h1>
-        </div>
-        <div className="paragraph-article">
-          <p>{article.content}</p>
-        </div>
-      </div> */}
       <div>
         <MainSelectedArticleBanner articleSelectedDetail={article} />
       </div>

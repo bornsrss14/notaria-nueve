@@ -17,7 +17,7 @@ export const NosotrosComp = () => {
             experiencia garantizamos un servicio confiable y eficiente.
           </p>
         </div>
-        <div style={{ margin: "1rem" }}>
+        <div className="container-logo-about">
           <Link to="/" className="logo-wrapper">
             <div style={{ width: "5rem", height: "5rem", overflow: "hidden" }}>
               <img
@@ -133,21 +133,21 @@ export const NosotrosComp = () => {
               photo={
                 "https://cdn.prod.website-files.com/6747ae021bab1a092e992b6c/6748c04cdc5fe3af7bae16e9_Jose-Rafael-Ruelas-Lopez%202-p-500.png"
               }
-              name="Lic. José Rafael Ruelas López"
+              name="José Rafael Ruelas López"
               title="Licenciado en Derecho"
             />
             <TeamMember
               photo={
                 "https://cdn.prod.website-files.com/6747ae021bab1a092e992b6c/6748c1569e0a31b7a40f94a5_Karla-Lindegren-Mora%201-p-500.png"
               }
-              name="Lic. Janeth Maceda Rojano"
+              name="Janeth Maceda Rojano"
               title="Licenciado en Derecho"
             />
             <TeamMember
               photo={
                 "https://cdn.prod.website-files.com/6747ae021bab1a092e992b6c/6748c04cdc5fe3af7bae16e9_Jose-Rafael-Ruelas-Lopez%202-p-500.png"
               }
-              name="Lic. José Rafael Ruelas López"
+              name="José Rafael Ruelas López"
               title="Licenciado en Derecho"
             />
             <TeamMember
@@ -161,7 +161,7 @@ export const NosotrosComp = () => {
               photo={
                 "https://cdn.prod.website-files.com/6747ae021bab1a092e992b6c/6748c04cdc5fe3af7bae16e9_Jose-Rafael-Ruelas-Lopez%202-p-500.png"
               }
-              name="Lic. José Rafael Ruelas López"
+              name="José Rafael Ruelas López"
               title="Licenciado en Derecho"
             />
           </div>

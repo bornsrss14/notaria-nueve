@@ -559,7 +559,7 @@ h3 {
   font-size: 0.7rem;
 }
 html {
-  font-size: 16px;
+  font-size: 1.125rem;
   scroll-behavior: smooth;
 }
 .groupSpan {
@@ -962,12 +962,7 @@ html {
   animation: pulse 1s infinite;
   z-index: 10000;
 }
-.heading-style-h2 {
-  font-size: 2.7rem;
-  color: var(--color-white);
-  font-weight: 600;
-  margin: 0;
-}
+
 .text-size-medium {
   font-size: 1.14rem;
   color: var(--color-white);
@@ -1013,14 +1008,6 @@ html {
 
 .display-lista-footer {
   margin: 0;
-}
-.padding-global {
-  background-color: var(--color-not-nueve);
-  color: var(--color-white);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 4rem 0rem;
-  align-items: center;
 }
 
 #section_servicios_layout {
@@ -1076,7 +1063,7 @@ html {
 .gallery-wrapper {
   position: relative;
   width: 90%;
-  margin: 1.6rem auto;
+  margin: 0rem auto;
 }
 
 /* --------------- Botones de navegación --------------- */
@@ -1133,16 +1120,7 @@ html {
   position: relative;
   cursor: pointer;
 }
-.gallery-item-large {
-  border-radius: 0.5rem;
-  flex: 0 0 clamp(100%, 25%, 350px);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 620px;
-  position: relative;
-  cursor: pointer;
-}
+
 /* Opcional: pequeño efecto al pasar el cursor */
 .gallery-item:hover {
   transform: scale(1.02);
@@ -1250,6 +1228,7 @@ html {
     grid-template-rows: auto auto;
     padding: 1rem 1rem 1rem;
     text-align: center;
+    border-bottom: 1px solid black;
   }
   .submenu--active {
     display: block;
@@ -1286,12 +1265,7 @@ html {
   .each-service {
     width: 90%;
   }
-  .padding-global {
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 4rem;
-    text-justify: inter-word;
-  }
+
   .inicio-servicios-servicio {
     display: flex;
     flex-direction: column;
@@ -1414,6 +1388,7 @@ html {
     display: flex;
     flex-direction: column;
     padding: 6rem 1.5rem;
+    align-items: last baseline;
   }
   .grid-footer-four-sections {
     display: flex;
@@ -1482,9 +1457,7 @@ html {
   background-color: rgba(0, 0, 0, 0.5); /* capa oscura para contraste */
   z-index: 2;
 }
-.box-messages * {
-  line-height: 3rem;
-}
+
 .hero__content {
   z-index: 3;
   color: white;
@@ -1510,55 +1483,8 @@ html {
   }
 }
 
-.nosotros_sobre-nosotros-item {
-  border: 1px solid var(--border-color--border-primary);
-  background-color: #0000000d;
-  width: 100%;
-  min-height: 14rem;
-  padding: 1.5rem;
-}
-
-.submenu-about-us {
-  grid-column-gap: 3rem;
-  grid-row-gap: 4rem;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  place-items: stretch start;
-  display: grid;
-  margin: 0% 5%;
-}
-
-.padding-section-large {
-  padding-top: 4rem;
-}
-
-.padding-global {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.nosotros_gallery_content {
-  display: grid;
-  grid-column-gap: 5rem;
-  grid-auto-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-}
-
 .nuestras-oficinas-color {
   color: black;
-}
-
-.team-member {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  min-width: 400px;
-  gap: 0.5rem;
-  margin: 1rem;
 }
 
 .team-photo {
@@ -1588,14 +1514,6 @@ html {
   color: red;
 }
 
-.team-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  overflow: hidden;
-  flex-wrap: wrap;
-}
-
 .cordoba-ver {
   display: flex;
   flex-direction: row;
@@ -1606,11 +1524,6 @@ html {
 .bg-color-white {
   background-color: white !important;
   color: black !important;
-}
-.conoce-equip-title {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding-bottom: 4rem;
 }
 
 .section-form {
