@@ -259,10 +259,7 @@ body {
   padding: 1.44rem 0.9rem;
   border: 1px solid var(--color-light-gray);
 }
-.special-section p,
-h3 {
-  margin: 0.2rem 0.3rem;
-}
+
 .each-serv-icon-label {
   display: flex;
   gap: 0.4rem;
@@ -818,16 +815,6 @@ html {
   left: 0;
 }
 
-.articulos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-  height: auto;
-  padding: 4rem 5.5rem;
-  background-color: var(--color-white-plus);
-  margin: 4rem auto 0;
-  align-items: center;
-}
 .paragraph-article {
   font-size: 1.124rem;
 }
@@ -910,34 +897,6 @@ html {
   grid-template-columns: repeat(2, 1fr);
 }
 
-#inicio_articulos_item-content {
-  display: grid;
-  overflow: hidden;
-  grid-template-columns: repeat(3, 1fr);
-  width: 87%;
-  margin: 4rem auto 4rem;
-  /* background-color: var(--color-light-gray); */
-  gap: 2rem;
-}
-.inicio_articulos_item {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  justify-content: space-between;
-  cursor: pointer;
-  gap: 1rem;
-  background-color: var(--color-white);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-}
-.inicio_articulos_item:hover {
-  background-color: var(--color-border-dos);
-}
-.heading-style-title {
-  font-size: 1.54rem !important;
-  font-weight: 600;
-}
 .text-style-item {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1021,10 +980,6 @@ html {
   width: 100%;
   place-items: stretch start;
   padding: 4rem 3rem;
-}
-.heading-style-h5 {
-  color: var(--color-dark-gray);
-  font-size: 1.5rem;
 }
 
 .itemsListado {
@@ -1335,12 +1290,7 @@ html {
   .grid-hours {
     width: fit-content;
   }
-  /* Seccion de ARTICULOS */
-  .articulos {
-    display: flex;
-    flex-direction: column;
-    padding: 4rem 2rem;
-  }
+
   .paragraph-article {
     font-size: 0.9rem;
   }
@@ -1350,10 +1300,7 @@ html {
     cursor: pointer;
     flex-direction: column;
   }
-  #inicio_articulos_item-content {
-    display: flex;
-    flex-direction: column;
-  }
+
   /*  PREGUNTAS FRECUENTES */
   .faq-wrapper-main {
     display: flex;

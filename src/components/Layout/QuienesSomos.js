@@ -59,7 +59,7 @@ export const QuienesSomos = () => {
       className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
     >
       <div className="articulos-notariales">
-        <h2>Articulos notariales</h2>
+        <h2 className="heading-style-h2 ">Articulos notariales</h2>
         <p>mantente al día con nuestros articulos sobre el sector notarial</p>
         <div className="we-are-section">
           <div className="article-quienes-somo">

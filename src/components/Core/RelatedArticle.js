@@ -14,8 +14,8 @@ export const RelatedArticleCom = () => {
   return (
     <div>
       <div className="articulos">
-        <div className="heading-style-h1">
-          <h1>Artículos notariales</h1>
+        <div className="">
+          <h1 className="heading-style-h1">Artículos notariales</h1>
         </div>
         <div className="paragraph-article">
           <p>

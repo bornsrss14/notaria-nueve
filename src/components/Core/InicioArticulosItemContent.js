@@ -10,7 +10,7 @@ export const InicioArticulosItemContent = ({
   return (
     <>
       <div className="inicio_articulos_item">
-        <h3 className="heading-style-title">{titleIteme}</h3>
+        <h3 className="heading-style-h5">{titleIteme}</h3>
         <div className="text-style-item">
           <p>{contentItem}</p>
         </div>
