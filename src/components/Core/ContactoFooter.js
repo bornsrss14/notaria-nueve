@@ -7,7 +7,9 @@ export const ContactoFooter = () => {
     <section className="section-contacto-footer">
       <div className="max-width-large">
         <div className="margin-bottom margin-xsmall">
-          <h2 className="heading-style-h2">Estamos listos para atenderte.</h2>
+          <h2 style={{ color: "white" }} className="heading-style-h2">
+            Estamos listos para atenderte.
+          </h2>
         </div>
         <p className="text-size-medium">
           Llámanos, envíanos un correo o completa el formulario con tus datos,

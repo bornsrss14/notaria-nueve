@@ -24,9 +24,10 @@ export const RelatedArticleCom = () => {
           </p>
         </div>
       </div>
-      <div>
+      {/*   <div>
+    cambia esto antes de tu commit
         <CarouselArticles />
-      </div>
+      </div> */}
       <div id="inicio_articulos_item-content">
         {/* todos los articulos inicio_articulos_item-content */}
         {allArticles.map((itemArticle) => {

@@ -51,7 +51,7 @@
   }
   #inicio_articulos_item-content {
     overflow: hidden;
-    width: 87%;
+    width: 79%;
     margin: 4rem auto 4rem;
     /* background-color: var(--color-light-gray); */
     gap: 2rem;
@@ -66,6 +66,10 @@
     gap: 1rem;
     background-color: var(--color-white);
     overflow: hidden;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
     border: 1px solid var(--color-border);
+    max-width: 20rem;
+    min-width: 16rem;
   }
 }

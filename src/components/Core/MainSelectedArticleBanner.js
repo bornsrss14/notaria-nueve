@@ -6,9 +6,13 @@ export const MainSelectedArticleBanner = ({ articleSelectedDetail }) => {
         <div className="wrapper-mark-up-singleArticle">
           <p>Inicio -Artículos Notariales</p>
           <div>
-            <h2>{articleSelectedDetail.titleArticle}</h2>
+            <h2 className="heading-style-h2">
+              {articleSelectedDetail.titleArticle}
+            </h2>
             <div>
-              <p>{articleSelectedDetail.subTitleArticle}</p>
+              <p className="heading-style-h5">
+                {articleSelectedDetail.subTitleArticle}
+              </p>
             </div>
           </div>
         </div>

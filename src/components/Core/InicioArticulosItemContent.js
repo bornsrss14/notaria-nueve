@@ -9,7 +9,7 @@ export const InicioArticulosItemContent = ({
 }) => {
   return (
     <>
-      <div className="inicio_articulos_item">
+      <div className="inicio_articulos_item caja">
         <h3 className="heading-style-h5">{titleIteme}</h3>
         <div className="text-style-item">
           <p>{contentItem}</p>
