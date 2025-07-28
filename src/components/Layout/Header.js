@@ -1,5 +1,5 @@
-import { IconChevronDown, IconChevronUp } from "@tabler/icons-react";
-import React, { useState } from "react";
+import { IconChevronDown } from "@tabler/icons-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import LogoNotary from "../Core/LogoNotary";

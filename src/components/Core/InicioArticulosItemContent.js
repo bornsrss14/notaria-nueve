@@ -1,6 +1,5 @@
 import React from "react";
 import ReadMore from "./ReadMore";
-import { Link } from "react-router-dom";
 
 export const InicioArticulosItemContent = ({
   item,
@@ -23,6 +22,3 @@ export const InicioArticulosItemContent = ({
 };
 
 export default InicioArticulosItemContent;
-{
-  /* este componente aparece en relatedArticles, renderizado uno por uno */
-}

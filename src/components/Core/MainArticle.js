@@ -2,7 +2,6 @@ import React from "react";
 import { ReadMore } from "./ReadMore";
 import { Link } from "react-router-dom";
 import ImageFitRectangle from "./ImageFitRectangle";
-import InicioArticulosItemContent from "./InicioArticulosItemContent";
 import { bannerArticles } from "../hooks/bannerArticles";
 export const MainArticle = () => {
   return (

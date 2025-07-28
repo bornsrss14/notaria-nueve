@@ -1,15 +1,12 @@
-import React, { useState } from "react";
-import MainArticle from "./MainArticle";
+import { useState } from "react";
 import InicioArticulosItemContent from "./InicioArticulosItemContent";
-import BtnContacto from "./BtnContacto";
 import { allMainArticles } from "../hooks/allMainArticles";
 import { Link } from "react-router-dom";
 import { ContactoFooter } from "./ContactoFooter";
 import CarouselArticles from "./CarouselArticles";
-import { bannerArticles } from "../hooks/bannerArticles";
 
 export const RelatedArticleCom = () => {
-  const [allArticles, setAllArticles] = useState(allMainArticles);
+  const [allArticles] = useState(allMainArticles);
 
   return (
     <div>
@@ -24,6 +21,7 @@ export const RelatedArticleCom = () => {
           </p>
         </div>
       </div>
+
       {/*   <div>
     cambia esto antes de tu commit
         <CarouselArticles />
