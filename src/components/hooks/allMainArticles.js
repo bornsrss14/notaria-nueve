@@ -100,7 +100,7 @@ export const allMainArticles = [
 
   {
     id: 1003,
-    titleArticle: "¿Cómo conseguir una vivienda?",
+    titleArticle: "¿Buscas una vivienda?",
     subTitleArticle: "Hipotecas, escrituraciones...",
     bannerArticle:
       "https://media.informabtl.com/wp-content/uploads/2020/12/1cb2927b-bigstock-the-gray-roof-house-is-placed-350287879.jpg",
@@ -237,7 +237,7 @@ export const allMainArticles = [
     content:
       "Conoce por qué escriturar una propiedad es fundamental para garantizar tu seguridad legal y evitar problemas futuros.",
 
-    paragrapsArticle: [ 
+    paragrapsArticle: [
       {
         subtitleParagraph: undefined,
         paragraph:

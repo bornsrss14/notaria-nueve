@@ -63,7 +63,7 @@ export const FAQComp = () => {
       </div>
 
       <div className="titulo-preguntas-frecuentes">
-        <h1>Preguntas frecuentes</h1>
+        <h3 className="heading-style-h3 ">Preguntas frecuentes</h3>
         <p>Explora los temas más consultados </p>
       </div>
 

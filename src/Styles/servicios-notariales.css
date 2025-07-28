@@ -1,0 +1,27 @@
+/* para las vistas de desktop*/
+@media (min-width: 768px) {
+  .container-img-bannerDescription {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .container-img-bannerDescription {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 4rem;
+  }
+}
+#section_servicios_layout {
+  display: grid;
+  grid-auto-columns: 1fr;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-column-gap: 4rem;
+  grid-template-rows: auto;
+  grid-row-gap: 2rem;
+  width: 100%;
+  place-items: stretch start;
+  padding: 4rem 3rem;
+}

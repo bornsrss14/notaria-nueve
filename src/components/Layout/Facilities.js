@@ -25,7 +25,7 @@ const Facilities = () => {
   return (
     <div>
       <section id="facilities-wrapper">
-        <h2>Nuestras instalaciones</h2>
+        <h3 className="heading-style-h3 ">Nuestras instalaciones</h3>
         <div className="our-facilities">
           {facilities.map((facility, index) => (
             <div key={index} className="icon-facilities">

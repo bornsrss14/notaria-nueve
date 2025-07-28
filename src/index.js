@@ -5,6 +5,7 @@ import "./Styles/fuentes.css";
 import "./Styles/about_us.css";
 import "./Styles/articles.css";
 import "./Styles/single_article.css";
+import "./Styles/servicios-notariales.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

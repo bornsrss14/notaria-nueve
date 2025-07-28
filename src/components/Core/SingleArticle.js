@@ -19,7 +19,7 @@ export const SingleArticle = ({ articleObject }) => {
           }}
         >
           <h3 className="numeral">{articleObject.counter}</h3>
-          <h3>{articleObject.titleArticle}</h3>
+          <h3 className="heading-style-h5">{articleObject.titleArticle}</h3>
         </div>
 
         <p className="subheading">{articleObject.subTitleArticle}</p>

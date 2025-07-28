@@ -107,7 +107,6 @@
     background-color: var(--color-not-nueve);
     color: var(--color-white);
     padding: 3.8rem 8%;
-    text-align: justify;
   }
   .container-logo-about {
     display: none;

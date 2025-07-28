@@ -11,22 +11,24 @@ export const ServiciosNotariales = ({ pestaña = "Servicios" }) => {
   if (!servicio) return <p>service not available </p>;
   return (
     <div>
-      <ImageFitRectangle
-        src={servicio.imagen}
-        height={"25rem"}
-        width={"100%"}
-      />
-      <div className="padding-global">
-        <div className="inicio-servicios-servicio">
-          <span className="text-size-medium">
-            Inicio <span>&gt;</span> {pestaña}
-          </span>
-          <h1 className="servicio-secciones-serv heading-style-h1">
-            {servicio.titulo}
-          </h1>
-        </div>
-        <div>
-          <p className=" text-size-medium">{servicio.resumen}</p>
+      <div className="container-img-bannerDescription">
+        <ImageFitRectangle
+          src={servicio.imagen}
+          height={"25rem"}
+          width={"100%"}
+        />
+        <div className="padding-global">
+          <div className="inicio-servicios-servicio">
+            <span className="text-size-medium">
+              Inicio <span>&gt;</span> {pestaña}
+            </span>
+            <h1 className="servicio-secciones-serv heading-style-h1">
+              {servicio.titulo}
+            </h1>
+          </div>
+          <div>
+            <p className=" text-size-medium">{servicio.resumen}</p>
+          </div>
         </div>
       </div>
       <div className="padding-section-large"></div>
