@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-export const FAQComp = () => {
+export const FAQComp = ({ paramColor = "white" }) => {
   const [openIndex, setOpenIndex] = useState(null);
   const faqsGenerales = [
     {
@@ -55,19 +55,25 @@ export const FAQComp = () => {
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
   return (
-    <section className="faq-wrapper-main">
+    <section
+      style={{
+        background: paramColor,
+        color: paramColor === "white" ? "black" : "white",
+      }}
+      className="faq-wrapper-main"
+    >
       <div className="titulo-preguntas-frecuentes" id="title-faq">
-        <h1 className="title-faq-p ">Preguntas frecuentes</h1>
+        <h2 className="heading-style-h3 ">Preguntas frecuentes</h2>
         <p className="sub-title-faq">Explora los temas más consultados </p>
       </div>
-
-      <div className="titulo-preguntas-frecuentes">
-        <h3 className="heading-style-h3 ">Preguntas frecuentes</h3>
-        <p>Explora los temas más consultados </p>
-      </div>
-
-      <div className="faq-container">
+      <div
+        style={{
+          background: "white",
+        }}
+        className="faq-container"
+      >
         <div className="faq-list">
           {faqsGenerales.map((faq, index) => (
             <div key={index} className="faq-item">
@@ -78,7 +84,9 @@ export const FAQComp = () => {
                 </span>
               </button>
               {openIndex === index && (
-                <div className="faq-answer">{faq.answer}</div>
+                <div style={{ color: "black" }} className="faq-answer">
+                  {faq.answer}
+                </div>
               )}
             </div>
           ))}

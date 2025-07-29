@@ -27,9 +27,11 @@ export const FormContacto = () => {
     <div className="section-form">
       <div className="main-contact-form ">
         <section className="section-tres-contactos">
-          <p>¿Buscas más información?</p>
-          <h1>Contáctanos</h1>
-          <p>Envía el formulario con tus datos o contáctanos directamente</p>
+          <p className="">¿Buscas más información?</p>
+          <h3 className="heading-style-h3">Contáctanos</h3>
+          <p className="">
+            Envía el formulario con tus datos o contáctanos directamente
+          </p>
 
           <div>
             <div className="item-contacto">

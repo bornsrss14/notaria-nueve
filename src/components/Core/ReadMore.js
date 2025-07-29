@@ -5,7 +5,7 @@ export const ReadMore = () => {
     <div>
       <div className="show-more">
         <a href="#ds">
-          <p className="fuente-secundaria">LEER MÁS</p>
+          <p className="fuente-secundaria">Leer más</p>
         </a>
         <IconArrowRight stroke={1.3} />
       </div>

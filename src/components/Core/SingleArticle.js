@@ -1,5 +1,4 @@
 import React from "react";
-import { LogoNotariaNueve } from "./LogoNotariaNueve";
 import ReadMore from "../Core/ReadMore";
 import BlurImage from "../Layout/BlurImage";
 import { Link } from "react-router-dom";

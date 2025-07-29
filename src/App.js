@@ -13,6 +13,7 @@ import NosotrosComp from "./components/Layout/NosotrosComp";
 import { ScrollToTop } from "./components/hooks/ScrollToTop";
 import DetailedArticle from "./components/Core/DetailedArticle";
 import NotFound from "./components/Core/NotFound";
+import NuestrosServicios from "./components/Layout/NuestrosServicios";
 function App() {
   const { scrollYProgress } = useScroll();
   return (
@@ -41,6 +42,8 @@ function App() {
         <Route path="/aviso-de-privacidad" element={<PrivacyNotice />}></Route>
         <Route path="/formulario-contacto" element={<FormContacto />}></Route>
         <Route path="nuestra-historia" element={<NuestraHistoria />}></Route>
+        <Route path="todos-servicios" element={<NuestrosServicios />}></Route>
+
         <Route path="/servicios/:id" element={<ServiciosNotariales />}></Route>
 
         <Route

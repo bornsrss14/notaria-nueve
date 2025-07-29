@@ -1,7 +1,4 @@
 import React from "react";
-import { IconArrowNarrowDown } from "@tabler/icons-react";
-import BlurImage from "./BlurImage";
-import ImageFitRectangle from "../Core/ImageFitRectangle";
 
 export const HeroSection = () => {
   return (

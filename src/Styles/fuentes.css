@@ -26,6 +26,11 @@
     font-size: 1.5rem;
     color: rgb(54, 54, 54);
   }
+  .heading-style-h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
 }
 
 /* FUENTES PARA DISPOSITIVOS MOVILES maximo de 768px*/
@@ -50,6 +55,11 @@
   .heading-style-h3 {
     font-size: 1.7rem;
   }
+  .heading-style-h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
   .heading-style-h5 {
     font-size: 1.25rem;
     color: rgb(54, 54, 54);
@@ -58,4 +68,25 @@
     font-size: 1.25rem;
     color: white;
   }
+}
+
+.text-style-item {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; /* propiedad estándar */
+  font-size: 1rem;
+  color: var(--color-dark-gray);
+  overflow: hidden;
+  text-align: justify;
+}
+.text-style-item-5lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6; /* propiedad estándar */
+  font-size: 1rem;
+  color: var(--color-dark-gray);
+  overflow: hidden;
+  text-align: justify;
 }

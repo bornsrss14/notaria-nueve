@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import {
   IconDisabled,
   IconParkingCircleFilled,
@@ -6,7 +5,6 @@ import {
   IconBrandCouchdb,
   IconWifi,
   IconBadgeWc,
-  IconBus,
 } from "@tabler/icons-react";
 
 const Facilities = () => {

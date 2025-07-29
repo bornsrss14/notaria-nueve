@@ -1,17 +1,8 @@
 import React from "react";
-import {
-  IconArrowRight,
-  IconUsers,
-  IconHeartHandshake,
-  IconHeart,
-  IconShield,
-  IconList,
-  IconFile,
-  IconClipboard,
-  IconPencil,
-} from "@tabler/icons-react";
+import { IconFile, IconClipboard, IconPencil } from "@tabler/icons-react";
 import { Servicios } from "../Core/Servicios";
 import ReadMore from "../Core/ReadMore";
+import { Link } from "react-router-dom";
 
 export const OurServices = () => {
   const ourServicesArr = [
@@ -63,9 +54,12 @@ export const OurServices = () => {
     <div id="nuestros-servicios">
       <div className="our-services-wrapper">
         {/*Aquí se escribe el loop para gneerar todos los servicios apartir del array */}
+
         <div className="special-section">
-          <h3>Nuestros Servicios</h3>
-          <ReadMore />
+          <Link to={"todos-servicios"}>
+            <h3>Nuestros Servicios</h3>
+            <ReadMore />
+          </Link>
         </div>
         {ourServicesArr.map((serv, index) => (
           <Servicios

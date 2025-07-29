@@ -4,7 +4,6 @@ import { allMainArticles } from "../hooks/allMainArticles";
 import { Link } from "react-router-dom";
 import { ContactoFooter } from "./ContactoFooter";
 import CarouselArticles from "./CarouselArticles";
-
 export const RelatedArticleCom = () => {
   const [allArticles] = useState(allMainArticles);
 

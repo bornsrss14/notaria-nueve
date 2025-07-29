@@ -30,7 +30,7 @@ export const HeaderComponent = () => {
                 style={{ display: "flex", gap: ".5rem", alignItems: "center" }}
               >
                 <a className="font-navs" href="#secc1">
-                  Servicios
+                  <Link to={"todos-servicios"}>Servicios</Link>
                 </a>
                 <div>
                   <IconChevronDown stroke={1} color="blue" size={24} />
