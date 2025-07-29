@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-export const FAQComp = ({ paramColor = "white" }) => {
+export const FAQComp = ({ nQuestions, paramColor = "white" }) => {
   const [openIndex, setOpenIndex] = useState(null);
   const faqsGenerales = [
     {
@@ -75,7 +75,7 @@ export const FAQComp = ({ paramColor = "white" }) => {
         className="faq-container"
       >
         <div className="faq-list">
-          {faqsGenerales.map((faq, index) => (
+          {faqsGenerales.slice(0, nQuestions).map((faq, index) => (
             <div key={index} className="faq-item">
               <button className="faq-question" onClick={() => toggleFaq(index)}>
                 {`${index + 1}.- ${faq.question}`}

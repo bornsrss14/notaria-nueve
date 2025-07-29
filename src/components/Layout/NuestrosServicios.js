@@ -6,7 +6,7 @@ import objetoContenido from "../hooks/servicios.json";
 import { Link } from "react-router-dom";
 export const NuestrosServicios = () => {
   return (
-    <div style={{ background: "#0f0377" }}>
+    <div style={{ background: "white" }}>
       <div style={{ padding: "0rem 0rem 2rem 0rem" }}>
         <div className="articulos">
           <div className="">
@@ -25,10 +25,10 @@ export const NuestrosServicios = () => {
         >
           {objetoContenido.map((serv) => {
             return (
-              <div className="special-section">
+              <div className="special-section-section">
                 <h3 className="heading-style-h4">{serv.titulo}</h3>
                 <p className="text-style-item-5lines">{serv.resumen}</p>
-                <Link to={"todos-servicios"}>
+                <Link to={`/servicios/${serv.id}`}>
                   <ReadMore />
                 </Link>
               </div>

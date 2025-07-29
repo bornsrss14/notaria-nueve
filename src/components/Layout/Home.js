@@ -18,7 +18,7 @@ export const Home = () => {
       <Contacto />
       <Facilities />
       <FacilitiesGallery customHeight={"220px"} />
-      <FAQComp />
+      <FAQComp nQuestions={4} />
     </div>
   );
 };

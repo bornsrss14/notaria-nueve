@@ -42,11 +42,11 @@
 @media (max-width: 768px) {
   .articulos {
     display: grid;
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    padding: 4rem 2rem;
+    padding: 4rem 0rem;
     background-color: var(--color-white-plus);
-    margin: 4rem 0rem 0;
+    margin: 4rem 1.5rem 0;
     gap: 0.5rem;
   }
   #inicio_articulos_item-content {

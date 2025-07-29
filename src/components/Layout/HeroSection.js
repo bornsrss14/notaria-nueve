@@ -1,6 +1,13 @@
 import React from "react";
 
 export const HeroSection = () => {
+  function scrollBehavior() {
+    console.log("fors");
+    window.scrollTo({
+      top: 500,
+      behavior: "smooth",
+    });
+  }
   return (
     <>
       <section className="hero">
@@ -25,8 +32,12 @@ export const HeroSection = () => {
             </p>
           </div>
           <div className="container-btns">
-            <button className="contact-button">Contáctanos</button>
-            <button className="contact-button-vol-2">Horarios</button>
+            <button onClick={scrollBehavior} className="contact-button">
+              Conócenos
+            </button>
+            <a href="/#horarios-servicio">
+              <button className="contact-button-vol-2">Horarios</button>
+            </a>
           </div>
         </div>
         {/* <img

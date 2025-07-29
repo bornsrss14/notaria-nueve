@@ -242,12 +242,6 @@ body {
   align-items: center;
   color: var(--color-wine);
 }
-.special-section {
-  height: 12rem;
-  width: 18rem;
-  padding: 1.44rem 0.9rem;
-  border: 1px solid var(--color-light-gray);
-}
 
 .each-serv-icon-label {
   display: flex;
@@ -484,7 +478,6 @@ body {
   max-width: 100%;
   gap: 2rem;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
   align-content: center;
   padding: 0 2.9rem;
   margin: 2.3rem auto;
@@ -603,7 +596,6 @@ html {
   display: grid;
   text-align: center;
   overflow-y: hidden;
-  margin: 3rem 0 2rem;
 }
 
 #facilities-gallery {
@@ -867,13 +859,11 @@ html {
 
 .itemsListado {
   width: fit-content;
-  min-width: 20rem;
-}
-.itemsListado > p {
-  margin-top: 1rem;
+  max-width: 100%;
 }
 
 .text-color-secondary {
+  margin-top: 1rem;
   color: var(--text-color--text-secondary);
 }
 
@@ -1021,11 +1011,27 @@ html {
 
 /* EVERYTHING RELATED TO MEDIA QUERIES desktop */
 @media (min-width: 768px) {
-  .container-main-services {
+  .special-section {
+    height: 12rem;
+    width: 18rem;
+    padding: 1.44rem 0.9rem;
+    border: 1px solid var(--color-light-gray);
+  }
+  .special-section-section {
+    height: auto;
+    width: 90%;
+    padding: 2rem 2rem;
+    border: 1px solid var(--color-light-gray);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .container-main-services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     width: 100%;
-    justify-content: space-evenly;
+    place-items: center;
     height: auto;
     position: relative;
   }
@@ -1111,6 +1117,15 @@ html {
 
 /* mobile first */
 @media (max-width: 768px) {
+  .special-section-section {
+    height: auto;
+    width: 90%;
+    padding: 2rem 1.56rem;
+    border: 1px solid var(--color-light-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
   .container-main-services {
     display: flex;
     flex-direction: column;
@@ -1297,7 +1312,7 @@ html {
   }
   #facilities-wrapper {
     padding: 0 1.7rem;
-    margin: 0 1rem;
+    margin: 0;
   }
 
   /* FOOTER */
