@@ -1,6 +1,3 @@
-import React from "react";
-import { IconMapPin, IconPhone } from "@tabler/icons-react";
-
 export const ContactItem = ({ typeDireccion, description, Icono }) => {
   return (
     <div className="contact-item">

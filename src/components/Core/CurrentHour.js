@@ -11,6 +11,7 @@ export const CurrentHour = ({ WeeklyServiceHours }) => {
     const intervalo = setInterval(() => {
       setCurrentHour(getCurrentHour());
       setToday(getTodayDay());
+      console.log(currentHour, today);
     }, 60000);
 
     setCurrentHour(getCurrentHour());

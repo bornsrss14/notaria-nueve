@@ -1,6 +1,3 @@
-import { article } from "motion/react-client";
-import React from "react";
-
 export const DetailedObjectArticle = ({ objectItem }) => {
   return (
     <article className="article-margin">

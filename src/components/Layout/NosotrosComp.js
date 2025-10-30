@@ -1,4 +1,3 @@
-import React from "react";
 import { IconMapPin } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import TeamMember from "../Core/TeamMember";

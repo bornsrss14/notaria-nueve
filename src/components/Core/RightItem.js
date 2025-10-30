@@ -1,6 +1,4 @@
-import React from "react";
 import ReadMore from "./ReadMore";
-import { Link } from "react-router-dom";
 
 export const RightItem = ({ key, contentItem, titleIteme }) => {
   return (
@@ -20,5 +18,3 @@ export const RightItem = ({ key, contentItem, titleIteme }) => {
 };
 
 export default RightItem;
-{
-}

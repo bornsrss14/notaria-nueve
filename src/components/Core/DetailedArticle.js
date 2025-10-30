@@ -1,12 +1,9 @@
-import React from "react";
-import MainArticle from "./MainArticle";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { allMainArticles } from "../hooks/allMainArticles";
 import { ContactoFooter } from "./ContactoFooter";
 import { bannerArticles } from "../hooks/bannerArticles";
 import DetailedObjectArticle from "./DetailedObjectArticle";
-import InicioArticulosItemContent from "./InicioArticulosItemContent";
 import MainSelectedArticleBanner from "./MainSelectedArticleBanner";
 import RightItem from "./RightItem";
 

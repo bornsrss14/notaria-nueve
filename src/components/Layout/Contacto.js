@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import iconoPersonalizado from "../../assets/icono-not.png";
 import { ContactItem } from "../Core/ContactItem";
-import { IconMapPin, IconPhone, IconMail } from "@tabler/icons-react";
+import { IconMapPin, IconPhone } from "@tabler/icons-react";
 import CurrentHour from "../Core/CurrentHour";
 import WeeklyServiceHours from "./WeeklyServiceHours";
 

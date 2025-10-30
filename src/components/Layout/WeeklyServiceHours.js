@@ -1,5 +1,6 @@
 <sectio></sectio>;
 export const WeeklyServiceHours = ({ horarios, getMatchDay }) => {
+  /*  
   const diasFestivos = [
     {
       dateFeriado: "2025-12-25",
@@ -14,7 +15,7 @@ export const WeeklyServiceHours = ({ horarios, getMatchDay }) => {
       rangos: [{ open: "10:00", close: "14:00" }],
     },
   ];
-
+  */
   return (
     <div>
       <section className="grid-hours">
