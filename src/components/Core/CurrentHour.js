@@ -18,7 +18,7 @@ export const CurrentHour = ({ WeeklyServiceHours }) => {
     setToday(getTodayDay());
 
     return () => clearInterval(intervalo);
-  }, []);
+  }, [currentHour, today]);
 
   function getCurrentHour() {
     const now = new Date();
