@@ -50,7 +50,7 @@ export const allMainArticles = [
     ],
   },
   {
-    id: 1002,
+    id: 1001,
     titleArticle: "¿Qué es un testamento?",
     subTitleArticle: " Y por qué hacer uno",
     bannerArticle:
@@ -99,7 +99,7 @@ export const allMainArticles = [
   },
 
   {
-    id: 1003,
+    id: 1002,
     titleArticle: "¿Buscas una vivienda?",
     subTitleArticle: "Hipotecas, escrituraciones...",
     bannerArticle:
@@ -152,7 +152,7 @@ export const allMainArticles = [
     ],
   },
   {
-    id: 1004,
+    id: 1003,
     titleArticle: "El notario y la creación de empresas",
     subTitleArticle: "El papel importante",
     bannerArticle:
@@ -187,7 +187,7 @@ export const allMainArticles = [
     ],
   },
   {
-    id: 1005,
+    id: 1004,
     titleArticle: "Donar en vida o heredar",
     subTitleArticle: " ¿Por qué hacer un testamento?",
     bannerArticle:
@@ -229,7 +229,7 @@ export const allMainArticles = [
     ],
   },
   {
-    id: 1006,
+    id: 1005,
     titleArticle: "Protege tu patrimonio",
     subTitleArticle: " Pequeño titulo",
     bannerArticle:

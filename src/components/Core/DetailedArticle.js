@@ -32,7 +32,7 @@ export const DetailedArticle = () => {
         <section className="articles-thumbnail">
           {allMainArticles.map((item, index) => {
             return (
-              <Link to={`/detalle-articulo/${1000 + index}`}>
+              <Link key={index} to={`/detalle-articulo/${1000 + index}`}>
                 <RightItem
                   key={100 + index}
                   contentItem={item.content}
